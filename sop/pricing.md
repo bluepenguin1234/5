@@ -50,7 +50,7 @@ Frontpage Studio sells **one package**, paired with a **mandatory 12-month Ongoi
 - Creates predictable recurring revenue for the business
 
 **Pitch script if pushed:**  
-> *"The $79/month covers your hosting, security, ongoing edits, and support. It's required for the first 12 months — that's how we keep the upfront price so low. After the first year it's month-to-month and you can cancel anytime."*
+> *"The $79/month covers your hosting, security, ongoing edits, backups and maintenance, and support. It's required for the first 12 months — that's how we keep the upfront price so low. After the first year it's month-to-month and you can cancel anytime."*
 
 ---
 
@@ -89,7 +89,7 @@ Most business owners spend more than that on coffee.
 ## HANDLING PRICE OBJECTIONS
 
 **"That's too expensive."**
-> "I totally understand. Just for context — a local agency would charge $2,500–$10,000 for the same scope, with monthly retainers of $500+. We're well under that, and you get everything bundled — build, hosting, edits, and support for a year."
+> "I totally understand. Just for context — a local agency would charge $2,500–$10,000 for the same scope, with monthly retainers of $500+. We're well under that, and you get everything bundled — build, hosting, security, edits, backups and maintenance, and support for a year."
 
 **"I can get a website for $10/month from Wix."**
 > "Absolutely — Wix is a great tool if you have 20 hours to learn it and design it yourself. What I offer is done-for-you: I handle the design, the copy, the setup, the hosting, the Google listing — and I keep the site current every month. You don't touch anything."
@@ -98,7 +98,7 @@ Most business owners spend more than that on coffee.
 > "Awesome — use him! If it doesn't work out or takes too long, I'm always here. I can turn one around in a week."
 
 **"Why is the $79/month required for 12 months?"**
-> "Two reasons. One, it's how I can offer the build at $599 instead of $1,500. Two, it covers hosting, security, edits, and support — the things that keep your site actually doing its job long after launch. After the first year it's month-to-month and you can cancel anytime."
+> "Two reasons. One, it's how I can offer the build at $599 instead of $1,500. Two, it covers hosting, security, edits, backups and maintenance, and support — the things that keep your site actually doing its job long after launch. After the first year it's month-to-month and you can cancel anytime."
 
 **"Can I just pay for the website and host it myself?"**
 > "We don't unbundle the build from the Care Plan — every site we ship comes with the 12-month plan. That's how we keep quality high and the upfront cost low. If you want to move hosting elsewhere after the 12 months, no problem — your site files are yours."

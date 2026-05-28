@@ -374,7 +374,9 @@ Do not promise keyword rankings — search-ready setup just means Google can fin
   },
   "areaServed": [
     { "@type": "City", "name": "Austin" },
-    { "@type": "City", "name": "Round Rock" }
+    { "@type": "City", "name": "Round Rock" },
+    { "@type": "City", "name": "Cedar Park" },
+    { "@type": "City", "name": "Pflugerville" }
   ],
   "openingHours": "Mo-Su 00:00-24:00",
   "priceRange": "$$",
@@ -540,7 +542,7 @@ Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client
 **Process:**
 - Give every Care Plan client your email and tell them to send update requests there
 - Batch updates — do them once a week, not same-day (unless urgent)
-- Log time in a simple spreadsheet so you can tell clients what you did at month 11
+- Log time in a simple spreadsheet so you can summarize usage anytime — useful if a client questions edits or you need to back up an overage conversation
 
 **If a client routinely burns through 1 hr/month:** Email them a usage summary at any point and offer to either bill overage at $75/hr or upgrade to a 2 hr/month plan at $129/month going forward.
 
@@ -594,7 +596,7 @@ Every Care Plan signs the client up for a **mandatory 12-month minimum**. After 
 **Track for every client:**
 - Launch date (= billing day each month)
 - Month-12 anniversary date (= renewal-decision touchpoint)
-- Total monthly hours used (for the upgrade conversation at month 11)
+- Total monthly hours used (so you can flag clients trending toward overage at any point)
 
 **Month 11 email (template) — continuous hosting confirmation:**
 > "Hi [Name] — quick heads-up: your initial 12-month Care Plan wraps up next month, and your hosting will continue uninterrupted at the same $79/month going forward. Nothing you need to do. After this point you can cancel any time with 30 days' notice. Thanks for being a great client this year!"
