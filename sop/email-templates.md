@@ -32,7 +32,7 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 >  
 > I left you a voicemail earlier this week — just wanted to follow up quickly.  
 >  
-> I know you're busy running [Business Name], so I'll keep it short: I build websites for local [business type] businesses in [city] for $599 — plus a simple $79/month plan for the first year that covers hosting, edits, and support. No tech headaches, I handle everything.  
+> I know you're busy running [Business Name], so I'll keep it short: I build websites for local [business type] businesses in [city] for $599 — plus a simple $79/month plan, required for the first 12 months and then month-to-month, that covers hosting, security, edits, backups and maintenance, and support. No tech headaches, I handle everything.  
 >  
 > Here's a demo for a [similar business type]: [demo link]  
 >  
@@ -187,7 +187,7 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 > - I've submitted your site to Google — it may take 1–2 weeks to show up in search results  
 > - Check out your site on your phone — it looks great on mobile!  
 >  
-> **For future changes:** Your $79/month Care Plan covers hosting, security, edits, and support — just email me whenever you need anything updated and I'll take care of it. The plan runs through [launch date + 12 months], then continues month-to-month.  
+> **For future changes:** Your $79/month Care Plan covers hosting, security, edits, backups and maintenance, and support — just email me whenever you need anything updated and I'll take care of it. The plan runs through [launch date + 12 months], then continues month-to-month.  
 >  
 > Thanks so much for trusting me with your business's online presence. Please leave me a Google review if you're happy with the work — it helps me find more clients just like you!  
 >  
@@ -205,7 +205,7 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 >  
 > Just checking in — it's been a couple of weeks since your site went live. Hope you're seeing some new customers find you!  
 >  
-> Quick reminder: your $79/month Care Plan covers hosting, security, edits, and support. If anything needs changing — new hours, a photo swap, updated prices — just reply here and I'll handle it.  
+> Quick reminder: your $79/month Care Plan covers hosting, security, edits, backups and maintenance, and support. If anything needs changing — new hours, a photo swap, updated prices — just reply here and I'll handle it.  
 >  
 > Hope business is booming!  
 >  

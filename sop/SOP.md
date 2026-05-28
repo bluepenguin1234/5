@@ -239,7 +239,7 @@ Every client signs up for the $79/month Ongoing Care Plan at launch for a **mini
 
 **Billing:**
 - Bill monthly on the same day-of-month as their launch date
-- Send a courtesy email at month 11 letting the client know the initial term is ending and the plan continues month-to-month unless they cancel
+- Send a courtesy email at month 11 confirming the initial term wraps up next month and hosting continues uninterrupted at the same $79/month — no action needed from them (see `deliverables-guide.md` §20 for the exact template)
 - If a client tries to cancel during the 12-month term: politely remind them of the agreement; remaining months are due in full
 - After month 12, if they cancel: hand over their files cleanly within 24 hours, point their domain wherever they want, done
 
