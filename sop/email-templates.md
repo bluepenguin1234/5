@@ -32,7 +32,7 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 >  
 > I left you a voicemail earlier this week — just wanted to follow up quickly.  
 >  
-> I know you're busy running [Business Name], so I'll keep it short: I build websites for local [business type] businesses in [city] for a flat rate of $599–$999. No monthly fees, no tech headaches — I handle everything.  
+> I know you're busy running [Business Name], so I'll keep it short: I build websites for local [business type] businesses in [city] for $599 — plus a simple $79/month plan for the first year that covers hosting, edits, and support. No tech headaches, I handle everything.  
 >  
 > Here's a demo for a [similar business type]: [demo link]  
 >  
@@ -70,10 +70,11 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 >  
 > Here's your custom proposal for [Business Name]'s new website. I've attached it as a PDF, and also pasted the key details below.  
 >  
-> **What I'm recommending:** [Package Name] — $[price]  
-> **What's included:** [brief list — 5 pages, contact form, mobile-friendly, etc.]  
+> **Business Presence Package** — $599 one-time + $79/month (12-month minimum)  
+> **What's included:** 3-page website (Home, Services, Contact), mobile-friendly, contact form + click-to-call, reviews section, photo gallery, hours + service area, Google Maps embed, email signup, Google Business Profile setup, search-ready setup  
 > **Timeline:** 7 days from deposit  
-> **Payment:** 50% now ($[half]), 50% when you approve the finished site  
+> **Payment:** $299.50 deposit now (50% of build), $378.50 at launch (50% balance + first month Care Plan), then $79/month for 11 more months  
+> **First-year total:** $1,547  
 >  
 > To move forward, just reply "Let's do it!" and I'll send you an invoice for the deposit. If you have any questions at all, I'm happy to hop on a quick call.  
 >  
@@ -186,7 +187,7 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 > - I've submitted your site to Google — it may take 1–2 weeks to show up in search results  
 > - Check out your site on your phone — it looks great on mobile!  
 >  
-> **For future changes:** Your $79/month plan covers up to 1 hour of updates each month — just email me and I'll take care of it.  
+> **For future changes:** Your $79/month Care Plan covers hosting, security, edits, and support — just email me whenever you need anything updated and I'll take care of it. The plan runs through [launch date + 12 months], then continues month-to-month.  
 >  
 > Thanks so much for trusting me with your business's online presence. Please leave me a Google review if you're happy with the work — it helps me find more clients just like you!  
 >  
@@ -204,7 +205,7 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 >  
 > Just checking in — it's been a couple of weeks since your site went live. Hope you're seeing some new customers find you!  
 >  
-> Quick reminder: your $79/month plan includes up to 1 hour of updates each month. If anything needs changing — new hours, a photo swap, updated prices — just reply here and I'll handle it.  
+> Quick reminder: your $79/month Care Plan covers hosting, security, edits, and support. If anything needs changing — new hours, a photo swap, updated prices — just reply here and I'll handle it.  
 >  
 > Hope business is booming!  
 >  

@@ -139,14 +139,15 @@ Sort by rating (higher rated = more to lose by not having a website). Start call
 ---
 
 ## PRICING REFERENCE (Quick View)
-| Package | Price | Delivery |
-|---------|-------|----------|
-| Starter | $599 | 7 days |
-| Professional | $999 | 7 days |
-| Premium | $1,499 | 5 days |
-| Monthly Maintenance | $79/mo | Ongoing |
+| Item | Price | Notes |
+|------|-------|-------|
+| Business Presence Package | $599 one-time | 7-day delivery |
+| Ongoing Care Plan | $79/month | **Mandatory 12-month minimum** ($948/yr) |
+| **First-year total per client** | **$1,547** | $599 build + $948 care plan |
 
-**Always collect 50% upfront.** No exceptions.
+**Always collect 50% of the build upfront.** No exceptions.  
+**First month of the Care Plan ($79) is collected at launch alongside the final 50%.**  
+The remaining 11 months of the Care Plan are billed monthly on the launch-day date.
 
 ---
 

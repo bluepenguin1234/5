@@ -12,13 +12,14 @@ Frontpage Studio is Brian's web design business targeting local businesses with 
 
 - Find local businesses with no website using the scraper or Google Maps
 - Cold call them, pitch a flat-rate website build
-- Every client pays a one-time build fee + mandatory $79/month hosting & care plan
+- Every client pays a one-time build fee + a mandatory 12-month Ongoing Care Plan at $79/month
 
 **Current pricing (do not change without being asked):**
-- Starter: $599 one-time + $79/month
-- Professional: $999 one-time + $79/month
-- $79/month is NOT optional — it is required with every plan
-- It covers: hosting on Vercel, 1 hr/month content updates, domain reminders, priority support
+- **Business Presence Package:** $599 one-time
+- **Ongoing Care Plan:** $79/month — mandatory for a minimum of 12 months ($948 minimum over the year)
+- The $79/month is NOT optional. After the initial 12 months it goes month-to-month and the client can cancel with 30 days' notice
+- Care Plan covers: hosting, security updates, website edits, backup/maintenance, support
+- First-year total to the client: $599 + ($79 × 12) = **$1,547**
 
 ---
 
@@ -91,8 +92,8 @@ web/
 
 ### When building the agency site (`index.html`)
 - Use the bento design system above — peach/blue/cream palette, Inter font, card grid layout
-- Pricing must always show $599 + $79/mo and $999 + $79/mo
-- $79/month must always be described as included/required, never optional
+- Pricing must always show the single Business Presence Package: $599 one-time + $79/month
+- The $79/month Ongoing Care Plan must always be described as mandatory with a 12-month minimum, never optional
 
 ### When building a new client demo or client site
 - Always invoke the `/frontend-design` skill first
@@ -112,13 +113,13 @@ web/
 
 ## Key SOPs to Know
 
-- **Revisions:** Starter = 1 round, Professional = 2 rounds. A "round" = one email with all feedback consolidated. Extra revisions = $75/hr.
-- **Payment:** 50% deposit before build starts, 50% at launch + first month of $79 hosting.
+- **Revisions:** Package includes 1 round of revisions. A "round" = one email with all feedback consolidated. Extra revisions = $75/hr.
+- **Payment:** 50% deposit before build starts, 50% at launch + first month of $79 Care Plan. Remaining 11 months billed monthly.
+- **Care Plan term:** Mandatory 12-month minimum. Month-to-month after that.
 - **Delivery:** 7 business days from deposit + content received.
 - **Hosting:** Vercel free tier. Push to GitHub, connect repo to Vercel, add custom domain. SSL is automatic.
 - **Contact forms:** Formspree (formspree.io) — free up to 50 submissions/month per form.
-- **Basic SEO (Starter):** Title tags, meta descriptions, heading hierarchy, alt text, NAP in text.
-- **Full SEO (Professional):** Above + keyword-targeted titles/h1s, Google Business Profile setup, LocalBusiness JSON-LD schema.
+- **Search-ready setup (included):** Title tags, meta descriptions, heading hierarchy, alt text, consistent NAP, LocalBusiness JSON-LD schema, Google Business Profile setup & optimization.
 
 ---
 

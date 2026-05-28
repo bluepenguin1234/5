@@ -1,28 +1,28 @@
 # Frontpage Studio — Deliverables Setup Guide
 
-How to build and set up every feature in every package.
+How to build and set up every feature in the Business Presence Package, plus the optional add-ons.
+
+> **The package is 3 pages:** Home, Services, Contact. Anything beyond that is an add-on ($75/page). Features marked **(add-on)** below are not in the base $599 package.
 
 ---
 
-## 1. 5-PAGE WEBSITE (Starter + Pro)
+## 1. 3-PAGE WEBSITE
 
-**The standard 5 pages:**
+**The standard 3 pages:**
 
 | Page | Purpose | Key sections |
 |---|---|---|
-| Home | First impression, capture attention | Hero with headline + CTA, services overview, trust signals, contact CTA |
-| About | Build trust | Owner photo/story, years in business, why they started, values |
-| Services | What they offer | Each service with name, short description, starting price (if comfortable) |
-| Contact | Get the call/form submission | Phone, email, address, hours, embedded map, contact form |
-| +1 Extra | Depends on business | Gallery, Testimonials, or Menu |
+| Home | First impression, capture attention | Hero with headline + CTA, services overview, reviews/testimonials, photo gallery, business hours + service area, email signup, contact CTA |
+| Services | What they offer | Each service with name, short description, starting price (if comfortable), click-to-call button |
+| Contact | Get the call/form submission | Phone (click-to-call), email, address, hours, service area, embedded Google Maps, contact form |
 
 **Setup:**
 1. Use the demo sites in `demos/` as your starting template — swap content, adjust colors
 2. Each page is a separate `.html` file linked from the nav
 3. Keep the nav identical across all pages
-4. Footer should appear on every page with phone number + address
+4. Footer should appear on every page with phone number + address + social links
 
-**Time estimate:** 3–5 hours for a Starter build once you've done 2–3 of them.
+**Time estimate:** 3–5 hours for a build once you've done 2–3 of them.
 
 ---
 
@@ -111,11 +111,11 @@ How to build and set up every feature in every package.
 
 ---
 
-## 6. BASIC SEO (Starter)
+## 6. SEARCH-READY SETUP
 
-**What it means:** The technical foundation that lets Google find and understand the site.
+**What it means:** The technical foundation that lets Google find and understand the site. Bundled with every Business Presence Package build.
 
-**Checklist for every Starter build:**
+**Checklist for every build:**
 
 **Title tags** — unique for every page, 50–60 characters:
 ```html
@@ -144,11 +144,11 @@ How to build and set up every feature in every package.
 
 **Clean URLs:** Name your files logically — `about.html`, `services.html`, not `page2.html`
 
-That's it for Starter. Do not promise keyword rankings — basic SEO just means Google can find and read the site.
+Do not promise keyword rankings — search-ready setup just means Google can find, read, and properly categorize the site. Combined with Google Business Profile (section 9) and schema markup (section 11), it's enough to start ranking for "[business type] near me" and "[business type] [city]" within a few weeks of launch.
 
 ---
 
-## 7. ONLINE BOOKING LINK (Professional)
+## 7. ONLINE BOOKING LINK (add-on — $99)
 
 **What it means:** A link or embedded widget that lets customers schedule an appointment.
 
@@ -172,7 +172,7 @@ That's it for Starter. Do not promise keyword rankings — basic SEO just means 
 
 ---
 
-## 8. PHOTO GALLERY (Professional)
+## 8. PHOTO GALLERY
 
 **What it means:** A responsive grid of the business's photos — work, location, products.
 
@@ -207,7 +207,7 @@ That's it for Starter. Do not promise keyword rankings — basic SEO just means 
 
 ---
 
-## 9. GOOGLE BUSINESS PROFILE SETUP (Professional)
+## 9. GOOGLE BUSINESS PROFILE SETUP
 
 **What it means:** Their listing on Google Maps and Google Search ("the box" that appears when you search a business name). This is the single highest-value SEO thing you can do for a local business.
 
@@ -234,7 +234,9 @@ That's it for Starter. Do not promise keyword rankings — basic SEO just means 
 
 ---
 
-## 10. KEYWORD-TARGETED SEO (Professional)
+## 10. KEYWORD-TARGETED SEO (light version included)
+
+> The base package handles the search-ready foundation (section 6). The deeper keyword work below is what makes a site actually rank — do it for every build, but don't promise specific rankings.
 
 **What it means:** Every page targets a specific phrase people search for in Google.
 
@@ -262,7 +264,7 @@ Do this for every page — each page targets a different keyword.
 
 ---
 
-## 11. SCHEMA MARKUP / JSON-LD (Professional)
+## 11. SCHEMA MARKUP / JSON-LD
 
 **What it means:** Hidden code that tells Google exactly what kind of business this is, their hours, phone, address — improves how they appear in search results.
 
@@ -301,7 +303,7 @@ Takes 5 minutes per site. Validate at [schema.org/validator](https://validator.s
 
 ---
 
-## 12. FAQ SECTION (Professional)
+## 12. FAQ SECTION (add-on — $99)
 
 **What it means:** Accordion-style Q&A section. Helps with SEO (Google sometimes pulls FAQ answers into search results) and reduces "dumb questions" in the client's inbox.
 
@@ -347,11 +349,13 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 
 ---
 
-## 14. CONTENT UPDATES — 1 HR/MONTH (Care Plan)
+## 14. WEBSITE EDITS (Care Plan — included)
 
-**What counts as a content update:**
+Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client** for planning purposes; the package isn't marketed with an explicit hourly cap, but watch for clients who consistently exceed an hour.
+
+**What counts as a normal edit:**
 - Changing hours of operation
-- Updating a phone number or address
+- Updating a phone number or address / service area
 - Swapping in a new photo
 - Adding or editing a service description
 - Updating a menu item or price
@@ -359,14 +363,31 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 - Fixing a typo
 
 **What does NOT count (quote separately):**
-- Adding a new page
+- Adding a new page (+$75)
 - Redesigning a section
-- New features (gallery, booking, etc.)
-- Anything requiring more than ~1 hour
+- New features (booking, e-commerce, etc.)
+- Anything taking more than ~2 hours of work
 
 **Process:**
 - Give every Care Plan client your email and tell them to send update requests there
-- Batch updates — do them once a week, not same-day (unless they're on priority support)
-- Log hours in a simple spreadsheet so you can tell clients what you did
+- Batch updates — do them once a week, not same-day (unless urgent)
+- Log time in a simple spreadsheet so you can tell clients what you did at month 11
 
-**If a client routinely burns through 1 hr:** Offer to upgrade them to a 2 hr/month plan at $129/month, or charge overage at $75/hr.
+**If a client routinely burns through 1 hr/month:** At their 12-month renewal conversation, offer to upgrade them to a 2 hr/month plan at $129/month, or charge overage at $75/hr going forward.
+
+---
+
+## 15. CARE PLAN — 12-MONTH MINIMUM TERM
+
+Every Care Plan signs the client up for a **mandatory 12-month minimum**. After that it goes month-to-month.
+
+**Track for every client:**
+- Launch date (= billing day each month)
+- Month-12 anniversary date (= renewal-decision touchpoint)
+- Total monthly hours used (for the upgrade conversation at month 11)
+
+**Month 11 email (template):**
+> "Hi [Name] — your initial Care Plan term wraps up next month. There's nothing you need to do: it'll keep running month-to-month at the same $79/month. Lots of clients stay because the edits + hosting + support add up faster than they expect. If you'd ever want to cancel after that, just give me 30 days' heads-up and I'll hand over your files. Otherwise, here's to year two!"
+
+**If they ask to cancel during months 1–12:**
+> "I totally get it. The 12-month term is fixed — that's what lets me keep the build at $599. The remaining [X] months are still due. Once the year is up, you're free to cancel or move hosting elsewhere with a 30-day heads-up. Want me to send you a summary of what you've used so far?"
