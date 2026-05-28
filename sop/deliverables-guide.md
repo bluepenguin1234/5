@@ -2,8 +2,8 @@
 
 How to build and set up every feature in the Business Presence Package, plus the optional add-ons, plus the Ongoing Care Plan.
 
-> **The package is 3 pages:** Home, Services, Contact. Anything beyond that is an add-on ($75/page).
-> Features marked **(add-on)** are not in the base $599 package.
+> **The package is 3 pages:** Home, Services, Contact. Extra pages are $75 each.
+> All add-ons are **$75 each**. Features marked **(add-on)** below are not in the base $599 package.
 > The Ongoing Care Plan ($79/month, mandatory 12-month minimum) covers hosting, security updates, website edits, backup/maintenance, and support.
 
 ---
@@ -387,6 +387,8 @@ Do not promise keyword rankings — search-ready setup just means Google can fin
 </script>
 ```
 
+> **Important:** Only include the `aggregateRating` block if the numbers come from the client's real Google Business Profile. If they have no reviews yet, delete the whole block — fake numbers will get the listing flagged.
+
 **`@type` options for common businesses:**
 - Plumber, Electrician, HVACBusiness → `"@type": "Plumber"` etc.
 - Restaurant → `"@type": "Restaurant"`
@@ -418,7 +420,7 @@ Quote these separately. Not included in the base $599 package.
 
 ---
 
-## 13. ONLINE BOOKING LINK (add-on — $99)
+## 13. ONLINE BOOKING LINK (add-on — $75)
 
 **What it means:** A link or embedded widget that lets customers schedule an appointment.
 
@@ -435,14 +437,14 @@ Quote these separately. Not included in the base $599 package.
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 ```
 
-**Other options (also $99 add-on each):**
+**Other options (also $75 add-on each):**
 - Square Appointments (if they use Square for payments)
 - Acuity Scheduling
 - Just a phone number CTA if they prefer calls: "Call to Book: (512) 555-0123" (free — just put it on the Services page)
 
 ---
 
-## 14. FAQ SECTION (add-on — $99)
+## 14. FAQ SECTION (add-on — $75)
 
 **What it means:** Accordion-style Q&A section. Helps with SEO (Google sometimes pulls FAQ answers into search results) and reduces "dumb questions" in the client's inbox.
 
@@ -505,7 +507,7 @@ $79/month, mandatory 12-month minimum. Covers everything below.
 - **Domain registrar lock** — confirm the client's domain has "registrar lock" enabled at Namecheap/Cloudflare so it can't be stolen via transfer
 - **DNS / Vercel account 2FA** — keep 2FA on your Vercel and GitHub accounts; you're the gatekeeper for every client site
 
-**Monthly 5-minute security check (do this on the 1st):**
+**Monthly security check (do this on the 1st):**
 1. Visit each client site in an incognito window → confirm the padlock is green
 2. Open Vercel dashboard → check no deployments have failed
 3. Glance at Formspree submissions for any one client → spot-check for spam patterns
@@ -540,7 +542,7 @@ Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client
 - Batch updates — do them once a week, not same-day (unless urgent)
 - Log time in a simple spreadsheet so you can tell clients what you did at month 11
 
-**If a client routinely burns through 1 hr/month:** At their 12-month renewal conversation, offer to upgrade them to a 2 hr/month plan at $129/month, or charge overage at $75/hr going forward.
+**If a client routinely burns through 1 hr/month:** Email them a usage summary at any point and offer to either bill overage at $75/hr or upgrade to a 2 hr/month plan at $129/month going forward.
 
 ---
 
@@ -556,8 +558,7 @@ Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client
 1. Lighthouse audit in Chrome DevTools — keep Performance, Accessibility, Best Practices, SEO all ≥ 85
 2. Verify all external links still work (Google Maps embed, social links, Calendly link if any)
 3. Confirm contact form still delivers (send a test submission yourself)
-4. Check the Google Business Profile is still verified and listing the right info
-5. Confirm the domain isn't expiring in the next 6 months (renew or remind the client to renew)
+4. Confirm the domain isn't expiring in the next 6 months (renew or remind the client to renew)
 
 **Domain renewal:**
 - Add every client's domain expiry date to your calendar
@@ -582,7 +583,7 @@ Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client
 **Boundaries to set up front:**
 - You don't take calls — email/text only — unless the site is actually down
 - You don't write blog posts, social posts, or copy for them (that's marketing, not maintenance)
-- You don't manage their Google Ads or their reviews — that's a separate engagement
+- You don't run paid ads or manage their reviews — that's a separate engagement and not something Frontpage Studio offers
 
 ---
 
@@ -595,8 +596,8 @@ Every Care Plan signs the client up for a **mandatory 12-month minimum**. After 
 - Month-12 anniversary date (= renewal-decision touchpoint)
 - Total monthly hours used (for the upgrade conversation at month 11)
 
-**Month 11 email (template):**
-> "Hi [Name] — your initial Care Plan term wraps up next month. There's nothing you need to do: it'll keep running month-to-month at the same $79/month. Lots of clients stay because the edits + hosting + support add up faster than they expect. If you'd ever want to cancel after that, just give me 30 days' heads-up and I'll hand over your files. Otherwise, here's to year two!"
+**Month 11 email (template) — continuous hosting confirmation:**
+> "Hi [Name] — quick heads-up: your initial 12-month Care Plan wraps up next month, and your hosting will continue uninterrupted at the same $79/month going forward. Nothing you need to do. After this point you can cancel any time with 30 days' notice. Thanks for being a great client this year!"
 
 **If they ask to cancel during months 1–12:**
 > "I totally get it. The 12-month term is fixed — that's what lets me keep the build at $599. The remaining [X] months are still due. Once the year is up, you're free to cancel or move hosting elsewhere with a 30-day heads-up. Want me to send you a summary of what you've used so far?"
