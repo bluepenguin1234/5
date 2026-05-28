@@ -5,3 +5,4 @@ scraper/*.pyc
 .DS_Store
 Thumbs.db
 node_modules/
+*.zip
