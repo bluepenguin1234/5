@@ -1,19 +1,20 @@
 # Frontpage Studio — Standard Operating Procedure
 
-**Last Updated:** 2026-05-27  
-**Version:** 1.1
+**Last Updated:** 2026-05-28  
+**Version:** 2.0
 
 ---
 
 ## BUSINESS MODEL OVERVIEW
 
-You find small businesses with no website, call them cold, and offer to build a professional website for a flat build fee plus mandatory $79/month hosting and care. The key insight: **there are hundreds of thousands of businesses in any metro area without a website.** They're not hard to find — they just haven't been asked yet.
+You find small businesses with no website, call them cold, and offer to build a professional website for a flat build fee plus a mandatory 12-month Ongoing Care Plan at $79/month. The key insight: **there are hundreds of thousands of businesses in any metro area without a website.** They're not hard to find — they just haven't been asked yet.
 
 **Pricing model:**
-- Starter: $599 one-time build + $79/month hosting & care
-- Professional: $999 one-time build + $79/month hosting & care
-- The $79/month is required with every plan — it covers hosting, updates, and support
-- 10 clients on hosting = $790/month recurring before you close a single new deal
+- **Business Presence Package:** $599 one-time build
+- **Ongoing Care Plan:** $79/month — mandatory 12-month minimum (then month-to-month)
+- The 12-month Care Plan is required with every build — it covers hosting, security updates, website edits, backup/maintenance, and support
+- **First-year revenue per client:** $599 + ($79 × 12) = **$1,547**
+- 10 clients on the Care Plan = $790/month recurring before you close a single new deal
 
 **Target customers:**
 - Restaurants, diners, cafés
@@ -94,12 +95,12 @@ LEAD GENERATION → COLD CALL → DISCOVERY CALL → PROPOSAL → DEPOSIT → BU
 7. "What's the best way for customers to contact you — phone, email, or form?"
 
 **Qualify on:**
-- Do they have budget? ($599 or $999 build + $79/month ongoing)
+- Do they have budget? ($599 build + $79/month for 12 months minimum — $1,547 first year)
 - Are they the decision maker?
 - Is there urgency? (If yes, move fast)
 
 **End the call:**
-> "Great — based on what you've told me, I think a [Starter/Professional] package would work well for you. I'll send you a proposal by end of day. It'll include a mockup idea and exact pricing. Sound good?"
+> "Great — based on what you've told me, the Business Presence Package will be a perfect fit. I'll send you a proposal by end of day. It'll include a mockup idea and exact pricing. Sound good?"
 
 ---
 
@@ -167,11 +168,9 @@ LEAD GENERATION → COLD CALL → DISCOVERY CALL → PROPOSAL → DEPOSIT → BU
 
 ## 7. REVISIONS
 
-**Policy per package:**
-- Starter: 1 round of revisions
-- Professional: 2 rounds
+**Policy:** The Business Presence Package includes **1 round of revisions** before launch.
 
-**A "round" = one email with a list of changes.** Not ongoing back-and-forth.
+**A "round" = one email with a consolidated list of changes.** Not ongoing back-and-forth.
 
 **How to handle revision requests:**
 > "Got your notes — I'll have those updates done within 24 hours."
@@ -217,27 +216,38 @@ LEAD GENERATION → COLD CALL → DISCOVERY CALL → PROPOSAL → DEPOSIT → BU
 
 ---
 
-## 10. HOSTING + CARE PLAN ($79/month — required with every plan)
+## 10. ONGOING CARE PLAN ($79/month — mandatory 12-month minimum)
 
-Every client pays $79/month starting at launch. This is not optional — it's part of every package.
+Every client signs up for the $79/month Ongoing Care Plan at launch for a **minimum of 12 months**. This is non-negotiable — it's how Frontpage Studio can offer a low one-time build fee while still keeping every site running smoothly.
+
+**Term:**
+- **Months 1–12: mandatory.** Client cannot cancel during this period without paying the remaining balance.
+- **After month 12: month-to-month.** Client may cancel with 30 days' written notice.
+- **First-year commitment per client:** $948 (12 × $79).
 
 **What's included:**
 - Hosting on Vercel (costs you $0)
-- Content updates up to 1 hour/month (text changes, new photos, updated hours, etc.)
-- Domain renewal reminders (30 days before expiry)
-- Priority email support (same-day response)
+- Security updates and SSL maintenance
+- Website edits (text changes, new photos, updated hours, seasonal promos — budget ~1 hr/month)
+- Backup and maintenance
+- Email support (same-day response on weekdays)
 
 **How to handle it:**
 - Collect the first month's $79 with the final build payment at launch
-- Set up a recurring charge via Stripe, PayPal, or Venmo on the same day each month
-- Log all active hosting clients in your tracking spreadsheet
+- Set up automated recurring billing via Stripe (preferred — easier dispute handling) on the same day each month for the remaining 11 months
+- Log all active Care Plan clients in your tracking spreadsheet with their start date and month-12 renewal-decision date
 
 **Billing:**
-- Invoice monthly on the same day as their launch date
-- If a client wants to cancel: give them their files, point their domain wherever they want, done
-- Never hold the site hostage — just make cancelling painless and they'll rarely do it
+- Bill monthly on the same day-of-month as their launch date
+- Send a courtesy email at month 11 letting the client know the initial term is ending and the plan continues month-to-month unless they cancel
+- If a client tries to cancel during the 12-month term: politely remind them of the agreement; remaining months are due in full
+- After month 12, if they cancel: hand over their files cleanly within 24 hours, point their domain wherever they want, done
 
-**Revenue math:** 10 clients = $790/month. 20 clients = $1,580/month. Pure profit after your first year.
+**Revenue math:**
+- 1 client first-year revenue: $1,547 ($599 + $948)
+- 10 active Care Plan clients = $790/month recurring
+- 20 active Care Plan clients = $1,580/month recurring
+- After year one, the recurring revenue compounds — it's mostly profit since hosting on Vercel is free
 
 ---
 
@@ -250,10 +260,10 @@ Every client pays $79/month starting at launch. This is not optional — it's pa
 | Discovery calls booked | 3–5/week |
 | Proposals sent | 3–5/week |
 | Clients closed | 1–2/week |
-| Revenue collected | $599–$2,000+/week |
-| Active hosting clients | Growing monthly |
-| Recurring hosting revenue | $79 × active clients |
+| Revenue collected | $599–$1,500+/week (build fees + first months) |
+| Active Care Plan clients | Growing monthly |
+| Recurring Care Plan revenue | $79 × active clients |
 
 ---
 
-*Frontpage Studio SOP v1.0 — Keep this updated as your process improves.*
+*Frontpage Studio SOP v2.0 — Keep this updated as your process improves.*

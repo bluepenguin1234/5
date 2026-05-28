@@ -29,7 +29,7 @@
 
 ### "We're not interested."
 > "Completely fair — can I ask, is it more of a budget thing or just not a priority right now?"  
-*(If budget): "I have a starter option at $599 — one-time fee, no monthly costs. Would that be more in range?"*  
+*(If budget): "Just so you know, my package is $599 one-time plus $79/month for the first year — that covers hosting, edits, and support. Most local agencies are 3–5x that. Want me to send over a quick example?"*  
 *(If not priority): "No problem at all. Mind if I send you an email just in case? I'll include a demo site so you can see what I build."*
 
 ### "We already have someone working on it."
@@ -37,7 +37,7 @@
 *(Move on — don't waste time here)*
 
 ### "How much does it cost?"
-> "It depends on exactly what you need — that's actually why I'd love that quick 10-minute call. But just so you know, most of my clients are in the $599 to $999 range. Does that sound reasonable for what you'd be looking for?"
+> "I keep it simple — one package: $599 to build your site, then $79/month for hosting, security, and edits. The monthly plan runs for the first 12 months and then becomes month-to-month. First-year total works out to about $1,547. Does that sound reasonable for what you'd be looking for?"
 
 ### "I have a Facebook page, that's enough."
 > "That's a great start — and a lot of customers will find you there. The difference with a website is Google. When someone types '[plumber/restaurant/etc.] near me' into Google, they see websites first — Facebook pages rank much lower. So you're probably not showing up for new customers who don't know you yet. That's the gap a website fills."
@@ -53,6 +53,9 @@
 ### "I can't afford it right now."
 > "I totally understand — when would be a better time to revisit this? I'm not going anywhere. Even 3 months from now, I'd love to help you get online."  
 *(Note the callback date in your tracker)*
+
+### "Why do I have to commit to 12 months of the $79?"
+> "Two reasons. One — it's how I can offer the build at $599 instead of $1,500 like the agencies charge. Two — it covers your hosting, security, edits, and support for the whole first year. After 12 months it's month-to-month and you can cancel anytime. Most clients stay because it's easier than moving."
 
 ---
 
