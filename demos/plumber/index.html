@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tucker Plumbing Services — Columbus, OH</title>
+  <meta name="description" content="Tucker Plumbing — licensed plumbers serving Columbus and surrounding areas. 24/7 emergency service. Call now for a free estimate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0D3B6E;
+      --blue-mid: #1557A0;
+      --blue-light: #1E6FCC;
+      --accent: #F97316;
+      --accent-dim: rgba(249,115,22,0.12);
+      --white: #FFFFFF;
+      --off-white: #F8FAFD;
+      --gray: #64748B;
+      --border: #E2E8F0;
+      --ff-display: 'Barlow Condensed', sans-serif;
+      --ff-body: 'Source Sans 3', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: #1E293B; font-family: var(--ff-body); overflow-x: hidden; }
+
+    /* DEMO BANNER */
+    .demo-banner {
+      background: var(--accent-dim);
+      border-bottom: 1px solid rgba(249,115,22,0.2);
+      padding: 10px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--accent);
+    }
+    .demo-banner a { color: var(--blue); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(13,59,110,0.3); }
+
+    /* EMERGENCY BAR */
+    .emergency-bar {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 10px 24px;
+      font-family: var(--ff-display);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .emergency-bar a { color: white; text-decoration: none; font-weight: 800; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--blue);
+      padding: 0 48px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .nav-logo-text {
+      font-family: var(--ff-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.05em;
+    }
+    .nav-logo-text span { color: var(--accent); font-weight: 800; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.7); transition: color 0.2s; }
+    .nav-links a:hover { color: white; }
+    .nav-call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      font-family: var(--ff-display);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .nav-call:hover { background: #ea6d0f; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--blue) 0%, #0a2d57 100%);
+      padding: 80px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '🔧';
+      position: absolute;
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%) rotate(-15deg);
+      font-size: 200px;
+      opacity: 0.04;
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-badge-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-chip {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.85);
+      padding: 5px 12px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    .hero-chip.orange { background: var(--accent-dim); border-color: rgba(249,115,22,0.4); color: #fdba74; }
+    .hero-h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .hero-h1 span { color: var(--accent); }
+    .hero-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-orange {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: white;
+      font-family: var(--ff-display);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-orange:hover { background: #ea6d0f; transform: translateY(-1px); }
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      font-family: var(--ff-display);
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .btn-white:hover { background: rgba(255,255,255,0.15); }
+    .hero-trust-box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 32px 28px;
+      min-width: 200px;
+      text-align: center;
+    }
+    .trust-num {
+      font-family: var(--ff-display);
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .trust-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; line-height: 1.4; }
+    .trust-divider { width: 40px; height: 1px; background: rgba(255,255,255,0.1); margin: 16px auto; }
+
+    /* SERVICES STRIP */
+    .services-strip {
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border);
+    }
+    .services-strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px;
+    }
+    .services-strip-title {
+      font-family: var(--ff-display);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+      color: var(--blue);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .service-tile {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px 20px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .service-tile:hover { border-color: var(--blue-light); box-shadow: 0 4px 16px rgba(13,59,110,0.08); }
+    .service-tile-icon { font-size: 28px; margin-bottom: 12px; }
+    .service-tile-name {
+      font-family: var(--ff-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 6px;
+      letter-spacing: 0.03em;
+    }
+    .service-tile-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
+
+    /* WHY US */
+    .why-section {
+      background: var(--blue);
+      padding: 72px 48px;
+    }
+    .why-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .why-header { text-align: center; margin-bottom: 48px; }
+    .why-header-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .why-header-title {
+      font-family: var(--ff-display);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 0.03em;
+    }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .why-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 28px 24px;
+    }
+    .why-card-icon { font-size: 32px; margin-bottom: 14px; }
+    .why-card-title {
+      font-family: var(--ff-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.03em;
+      margin-bottom: 8px;
+    }
+    .why-card-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    /* ABOUT + QUOTE */
+    .about-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 72px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-label { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .about-title {
+      font-family: var(--ff-display);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--blue);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .about-body { font-size: 16px; color: var(--gray); line-height: 1.8; margin-bottom: 16px; }
+    .about-creds { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+    .cred {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+    }
+    .quote-box {
+      background: var(--off-white);
+      border-left: 4px solid var(--accent);
+      padding: 36px 32px;
+      border-radius: 0 8px 8px 0;
+    }
+    .quote-stars { font-size: 18px; color: var(--accent); margin-bottom: 16px; }
+    .quote-text { font-size: 17px; color: #334155; line-height: 1.7; font-style: italic; margin-bottom: 16px; }
+    .quote-author { font-weight: 600; font-size: 14px; color: var(--blue); }
+
+    /* CONTACT */
+    .contact-section {
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      padding: 72px 48px;
+    }
+    .contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-title { font-family: var(--ff-display); font-size: 2.5rem; font-weight: 800; color: var(--blue); letter-spacing: 0.02em; margin-bottom: 8px; }
+    .contact-sub { font-size: 16px; color: var(--gray); line-height: 1.7; margin-bottom: 32px; }
+    .contact-item { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+    .contact-icon {
+      width: 44px; height: 44px;
+      background: var(--blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .contact-text strong { display: block; font-size: 15px; font-weight: 600; color: var(--blue); }
+    .contact-text span { font-size: 14px; color: var(--gray); }
+    .form-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+    .form-title { font-family: var(--ff-display); font-size: 1.6rem; font-weight: 700; color: var(--blue); margin-bottom: 20px; letter-spacing: 0.02em; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 5px; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      padding: 11px 14px;
+      font-family: var(--ff-body);
+      font-size: 14px;
+      color: #1e293b;
+      outline: none;
+      transition: border-color 0.2s;
+      background: white;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--blue-light); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--accent);
+      color: white;
+      font-family: var(--ff-display);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 4px;
+    }
+    .form-submit:hover { background: #ea6d0f; }
+
+    /* CTA FOOTER BAR */
+    .cta-bar {
+      background: var(--accent);
+      padding: 32px 48px;
+      text-align: center;
+    }
+    .cta-bar h2 { font-family: var(--ff-display); font-size: 2.2rem; font-weight: 800; color: white; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .cta-bar p { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 16px; }
+
+    /* FOOTER */
+    footer {
+      background: var(--blue);
+      color: rgba(255,255,255,0.5);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo-text { font-family: var(--ff-display); font-size: 20px; font-weight: 700; color: white; letter-spacing: 0.05em; }
+    .footer-logo-text span { color: var(--accent); }
+    .footer-info { font-size: 13px; text-align: center; }
+    .footer-license { font-size: 12px; }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 60px 24px; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-trust-box { display: none; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .about-section, .contact-inner { grid-template-columns: 1fr; padding: 48px 24px; }
+      .services-strip-inner, .why-inner { padding: 48px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      footer { padding: 28px 24px; }
+      .cta-bar { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner">
+    ⚡ This is a demo website — built by <strong>Frontpage Studio</strong>. Want one like this for your business? <a href="../../index.html">Get a free quote →</a>
+  </div>
+
+  <!-- EMERGENCY BAR -->
+  <div class="emergency-bar">
+    🚨 24/7 EMERGENCY PLUMBING — CALL NOW: <a href="tel:+16145550242">(614) 555-0242</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">🔧</div>
+      <div class="nav-logo-text"><span>Tucker</span> Plumbing</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:+16145550242" class="nav-call">📞 (614) 555-0242</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge-row">
+          <div class="hero-chip">Licensed & Insured</div>
+          <div class="hero-chip">Columbus, OH</div>
+          <div class="hero-chip orange">24/7 Emergency</div>
+        </div>
+        <h1 class="hero-h1">YOUR TRUSTED<br>COLUMBUS<br><span>PLUMBER.</span></h1>
+        <p class="hero-sub">Leaks, clogs, water heaters, drain cleaning — Tucker Plumbing has served Central Ohio families and businesses since 2008. No hidden fees. Upfront pricing. Fast response.</p>
+        <div class="hero-actions">
+          <a href="tel:+16145550242" class="btn-orange">📞 Call for Free Estimate</a>
+          <a href="#services" class="btn-white">Our Services →</a>
+        </div>
+      </div>
+      <div class="hero-trust-box">
+        <div class="trust-num">15+</div>
+        <div class="trust-label">Years Serving Columbus</div>
+        <div class="trust-divider"></div>
+        <div class="trust-num">4.9★</div>
+        <div class="trust-label">Google Rating (200+ reviews)</div>
+        <div class="trust-divider"></div>
+        <div class="trust-num">24/7</div>
+        <div class="trust-label">Emergency Service</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="services-strip" id="services">
+    <div class="services-strip-inner">
+      <div class="services-strip-title">SERVICES WE PROVIDE</div>
+      <div class="services-grid">
+        <div class="service-tile">
+          <div class="service-tile-icon">🚰</div>
+          <div class="service-tile-name">Leak Repair</div>
+          <div class="service-tile-desc">Pipe leaks, faucet drips, supply line failures. We find it and fix it fast.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-icon">🚿</div>
+          <div class="service-tile-name">Drain Cleaning</div>
+          <div class="service-tile-desc">Clogged drains, backed-up sewer lines, hydro-jetting. No clog too stubborn.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-icon">🌡️</div>
+          <div class="service-tile-name">Water Heaters</div>
+          <div class="service-tile-desc">Tank & tankless install, repair, and replacement. Same-day service available.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-icon">🚽</div>
+          <div class="service-tile-name">Toilet Repair</div>
+          <div class="service-tile-desc">Running toilets, clogs, flush valve replacement, toilet installation.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-icon">🏗️</div>
+          <div class="service-tile-name">Remodels</div>
+          <div class="service-tile-desc">Bathroom and kitchen plumbing for remodels, additions, and new builds.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-icon">🌊</div>
+          <div class="service-tile-name">Sump Pumps</div>
+          <div class="service-tile-desc">Install, repair, or replace sump pumps before the next storm hits.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-icon">❄️</div>
+          <div class="service-tile-name">Frozen Pipes</div>
+          <div class="service-tile-desc">Emergency pipe thawing and burst pipe repair. Available 24/7 in winter.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-icon">🔬</div>
+          <div class="service-tile-name">Inspections</div>
+          <div class="service-tile-desc">Pre-purchase home inspection, camera inspection, and leak detection.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY TUCKER -->
+  <div class="why-section">
+    <div class="why-inner">
+      <div class="why-header">
+        <div class="why-header-label">Why Choose Tucker</div>
+        <div class="why-header-title">We Do It Right The First Time</div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-card-icon">💰</div>
+          <div class="why-card-title">Upfront Pricing</div>
+          <div class="why-card-desc">You'll know the cost before we start — no surprise charges, no bait-and-switch. What we quote is what you pay.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">⚡</div>
+          <div class="why-card-title">Fast Response</div>
+          <div class="why-card-desc">For non-emergencies, we're usually there the same day or next morning. Emergencies? We pick up 24/7.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">🏆</div>
+          <div class="why-card-title">Licensed & Insured</div>
+          <div class="why-card-desc">Ohio state licensed, fully insured, background-checked. You're protected on every job we do in your home.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">🔁</div>
+          <div class="why-card-title">Guaranteed Work</div>
+          <div class="why-card-desc">We stand behind every repair with a 1-year labor warranty. If it fails, we come back and fix it — no charge.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">🧹</div>
+          <div class="why-card-title">Clean Job Sites</div>
+          <div class="why-card-desc">We protect your floors, clean up after every job, and treat your home like it's our own. No mess left behind.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">📞</div>
+          <div class="why-card-title">Real People Answer</div>
+          <div class="why-card-desc">When you call Tucker Plumbing, a real person answers — not an answering service or a voicemail system.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT + TESTIMONIAL -->
+  <div class="about-section" id="about">
+    <div>
+      <div class="about-label">About Tucker Plumbing</div>
+      <div class="about-title">FAMILY-OWNED.<br>LOCALLY TRUSTED.</div>
+      <p class="about-body">Tucker Plumbing was founded in 2008 by Dave Tucker, a second-generation plumber who grew up learning the trade from his father. What started as a one-truck operation has grown into a team of eight licensed plumbers — but we've never lost the personal touch that makes our customers keep coming back.</p>
+      <p class="about-body">We serve Columbus and all surrounding communities including Dublin, Westerville, Grove City, Hilliard, Powell, and New Albany.</p>
+      <div class="about-creds">
+        <div class="cred">✅ Ohio Licensed #PL-48820</div>
+        <div class="cred">🛡️ $2M Liability Insurance</div>
+        <div class="cred">⭐ BBB A+ Rated</div>
+        <div class="cred">🏅 Angi Super Service</div>
+      </div>
+    </div>
+    <div>
+      <div class="quote-box">
+        <div class="quote-stars">★★★★★</div>
+        <div class="quote-text">"Tucker Plumbing came out on a Sunday morning when our water heater burst and flooded the basement. Dave's team was there in under 2 hours, had the water off, and replaced the unit the same day. Fair price, zero drama. These guys are the real deal."</div>
+        <div class="quote-author">— Sandra M., Dublin OH</div>
+      </div>
+      <div class="quote-box" style="margin-top:16px">
+        <div class="quote-stars">★★★★★</div>
+        <div class="quote-text">"I called three plumbers — Tucker was the only one who gave me an upfront price over the phone and actually showed up when they said they would. Fixed the clog in 30 minutes. Will never call anyone else."</div>
+        <div class="quote-author">— Marcus T., Westerville OH</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="contact-title">GET A FREE ESTIMATE</div>
+        <p class="contact-sub">Call, text, or fill out the form — we'll get back to you the same day. Emergency? Call right now.</p>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-text">
+            <strong>(614) 555-0242</strong>
+            <span>Call or text — 24/7 for emergencies</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-text">
+            <strong>service@tuckerplumbing.com</strong>
+            <span>Email for non-emergency requests</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <strong>Serving Greater Columbus, OH</strong>
+            <span>Columbus · Dublin · Westerville · Grove City · Hilliard</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">⏰</div>
+          <div class="contact-text">
+            <strong>Office Hours</strong>
+            <span>Mon–Fri 7am–6pm · Sat 8am–4pm<br>24/7 Emergency Line Always On</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="form-title">REQUEST SERVICE</div>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="(614) 555-0000" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Address / Service Area</label>
+            <input type="text" name="address" placeholder="City or zip code" />
+          </div>
+          <div class="form-group">
+            <label>Type of Issue</label>
+            <select name="issue">
+              <option value="">Select the issue...</option>
+              <option>Drain / Clog</option>
+              <option>Leak</option>
+              <option>Water Heater</option>
+              <option>Toilet Issue</option>
+              <option>Emergency</option>
+              <option>Remodel / New Work</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Describe the problem (optional)</label>
+            <textarea name="description" rows="3" placeholder="What's going on? Any details help us prepare..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">SUBMIT REQUEST</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BAR -->
+  <div class="cta-bar">
+    <h2>PLUMBING EMERGENCY? WE'RE READY.</h2>
+    <p>Available 24/7 — no answering service, no voicemail. A plumber picks up.</p>
+    <a href="tel:+16145550242" class="btn-orange" style="font-size:20px;padding:16px 40px">📞 Call (614) 555-0242 Now</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo-text"><span>Tucker</span> Plumbing Services</div>
+    <div class="footer-info">
+      Columbus, OH · (614) 555-0242 · service@tuckerplumbing.com<br>
+      © 2026 Tucker Plumbing Services. All rights reserved. OH License #PL-48820<br>
+      <span style="font-size:12px;opacity:0.6">Website by <a href="../../index.html" style="color:rgba(249,115,22,0.7);text-decoration:none">Frontpage Studio</a></span>
+    </div>
+    <div class="footer-license" style="text-align:right">
+      Licensed · Insured · BBB A+
+    </div>
+  </footer>
+
+</body>
+</html>

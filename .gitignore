@@ -1,0 +1,7 @@
+.env
+*.csv
+scraper/__pycache__/
+scraper/*.pyc
+.DS_Store
+Thumbs.db
+node_modules/
