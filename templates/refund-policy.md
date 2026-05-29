@@ -13,8 +13,8 @@ The Business Presence Package build fee is $599, split into a $299.50 deposit an
 
 | Stage | Refund |
 |---|---|
-| You paid the deposit but have not yet submitted your intake form | **Full deposit refund** ($299.50). No work has begun. |
-| You submitted the intake form but the staging preview has not yet been delivered | **50% deposit refund** ($149.75). We have started but not delivered. |
+| You paid the deposit but have not yet submitted your intake form | **Full deposit refund** ($299.50). No work has begun and your build slot has not been locked. |
+| You submitted the intake form (build is now underway) | **Deposit is non-refundable.** Your build slot is locked on our calendar, your domain has been purchased on your behalf, and active design and customization work has started. A half-built personalized site cannot be reused for another client. |
 | The staging preview has been delivered | **Deposit is non-refundable.** Work has been delivered for your review. |
 | You paid the launch balance and the site is live | **Build fee is non-refundable.** The work has been completed and delivered. |
 
