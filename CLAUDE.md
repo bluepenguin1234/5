@@ -1,5 +1,7 @@
 # Frontpage Studio — Claude Instructions
 
+This file is the **source of truth** for the project. Anything that contradicts it in another file is wrong and should be updated to match.
+
 ## What This Project Is
 
 Frontpage Studio is Brian's web design business targeting local businesses with no website. Cold call outreach model. Brian builds the sites, handles hosting, and does the sales calls himself.
@@ -58,33 +60,31 @@ All sites (agency site + client demos) use this design system. Always follow it 
 
 ```
 web/
-├── index.html                  ← Agency website (Frontpage Studio's own site)
-├── CLAUDE.md                   ← This file
-├── LAUNCH-GUIDE.md             ← Step-by-step launch checklist for Brian
-├── vercel.json                 ← Vercel deployment config (static HTML)
+├── CLAUDE.md                ← Source of truth. Facts, pricing, design rules, file map.
+├── OPERATIONS.md            ← The playbook. Selling, building, launching, billing. All scripts + email templates + setup appendix.
+├── BUILD-GUIDE.md           ← Technical reference. How to actually build each feature (forms, schema, GBP, hosting, care-plan ops).
+│
+├── index.html               ← Agency website (Frontpage Studio's own site)
+├── index-v2.html            ← Alternate design of the agency site (taste-skill aesthetic)
+├── vercel.json              ← Vercel deployment config
 ├── .gitignore
 │
 ├── demos/
-│   ├── restaurant/index.html   ← Maplewood Kitchen (Cormorant Garamond, dark luxury)
-│   ├── barbershop/index.html   ← Sharp & Co. (Bebas Neue, navy/gold, classic)
-│   └── plumber/index.html      ← Tucker Plumbing (Barlow Condensed, blue/orange)
+│   ├── restaurant/index.html ← Maplewood Kitchen (Cormorant Garamond, dark luxury)
+│   ├── barbershop/index.html ← Sharp & Co. (Bebas Neue, navy/gold, classic)
+│   └── plumber/index.html    ← Tucker Plumbing (Barlow Condensed, blue/orange)
 │
 ├── scraper/
-│   ├── find_leads.py           ← Google Places API scraper (finds businesses with no website)
+│   ├── find_leads.py        ← Google Places API scraper (finds businesses with no website)
 │   └── requirements.txt
 │
-├── sop/
-│   ├── SOP.md                  ← Master business operating procedure
-│   ├── packages.md             ← Package breakdown (what each plan includes)
-│   ├── pricing.md              ← Pricing strategy, objection handling, revenue projections
-│   ├── deliverables-guide.md   ← How to set up every feature (SEO, forms, GMB, etc.)
-│   ├── cold-call-script.md     ← Word-for-word call scripts + objection handling
-│   └── email-templates.md      ← All email templates (outreach through launch)
+├── templates/
+│   ├── proposal.html        ← Client proposal (print to PDF, attach to email)
+│   ├── invoice.html         ← Client invoice (print to PDF)
+│   └── client-intake.md     ← Master intake questionnaire (paste into Google Form)
 │
-└── templates/
-    ├── proposal.html           ← Client proposal (print to PDF)
-    ├── invoice.html            ← Client invoice (print to PDF)
-    └── client-intake.md        ← Master intake questionnaire (paste into Google Form)
+└── todo/
+    └── TODO.md              ← Outstanding work and tasks (Brian and Claude)
 ```
 
 ---
@@ -112,27 +112,49 @@ web/
 
 ---
 
-## Key SOPs to Know
+## Key facts (the canonical list)
 
-- **Revisions:** Package includes 1 round of revisions. A "round" = one email with all feedback consolidated. Extra revisions = $75/hr.
-- **Payment:** 50% deposit before build starts, 50% at launch + first month of $79 Care Plan. Remaining 11 months billed monthly.
-- **Care Plan term:** Mandatory 12-month minimum. Month-to-month after that.
-- **Delivery:** 7 business days from deposit + content received.
-- **Hosting:** Vercel free tier. Push to GitHub, connect repo to Vercel, add custom domain. SSL is automatic.
-- **Contact forms:** Formspree (formspree.io) — free up to 50 submissions/month per form.
-- **Search-ready setup (included):** Title tags, meta descriptions, heading hierarchy, alt text, consistent NAP, LocalBusiness JSON-LD schema, Google Business Profile setup & optimization.
+- **Package:** Business Presence Package, $599 one-time, 3 pages (Home, Services, Contact), 7-day delivery
+- **Care Plan:** $79/month, **mandatory 12-month minimum**, then month-to-month with 30 days' notice
+- **Care Plan covers:** hosting, security updates, website edits, backup/maintenance, support
+- **First-year total per client:** $1,547 ($599 build + $948 care plan)
+- **Payment schedule:** $299.50 deposit at signing → $378.50 at launch (balance + first month care) → $79/month for 11 more months
+- **Revisions:** 1 round included. Extras $75 each.
+- **Hosting:** Vercel free tier (Brian's cost: $0)
+- **Contact forms:** Formspree
+- **Payments:** Stripe (Payment Links + Subscription)
+- **Search-ready setup (included):** titles, meta, heading hierarchy, alt text, consistent NAP, LocalBusiness JSON-LD, Google Business Profile setup
+- **Add-ons (flat $75 each):** extra page, FAQ section, extra revision round, booking-system integration
+- **Add-ons (other):** custom logo $149, e-commerce $399, rush delivery +$200, domain registration $25 + cost
+
+For detailed scripts, email templates, build process, and launch setup: see `OPERATIONS.md`.
+For how to technically build each feature: see `BUILD-GUIDE.md`.
 
 ---
 
-## What Brian Still Needs to Do (One-Time Setup)
+## Cross-file audit rule
 
-These require Brian to act — Claude cannot do them:
+When any business rule changes (pricing, term length, feature lists, package contents, add-on prices, care plan deliverables), audit **all three** root docs and the templates in one pass:
+
+1. `CLAUDE.md` (this file)
+2. `OPERATIONS.md`
+3. `BUILD-GUIDE.md`
+4. `index.html`, `index-v2.html`
+5. `templates/proposal.html`, `templates/invoice.html`, `templates/client-intake.md`
+
+Do not assume any file is in sync. Marketing copy drifts; numbers drift; feature lists drift. Always do the find-and-replace and then verify with a grep for the old values.
+
+---
+
+## What Brian still needs to do (one-time setup)
+
+These require Brian to act — Claude cannot do them. Full instructions in `OPERATIONS.md` Appendix A.
+
 1. Buy domain (frontpagestudio.com or frontpage.studio)
 2. Set up Zoho Mail for brian@frontpagestudio.com (free)
 3. Create GitHub account + push this repo
-4. Connect repo to Vercel (vercel.com) and add custom domain
+4. Connect repo to Vercel and add custom domain
 5. Sign up for Formspree and replace `YOUR_FORM_ID` in index.html
-6. Get Google Places API key and add to `.env` for the scraper
-7. Set up Stripe or PayPal for client billing
-
-Full instructions in `LAUNCH-GUIDE.md`.
+6. Activate Stripe + create the three Payment Links (deposit, launch, $79/mo subscription)
+7. Build the Google Form intake from `templates/client-intake.md`
+8. Get a Google Places API key for the scraper
