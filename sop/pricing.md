@@ -59,8 +59,6 @@ Frontpage Studio sells **one package**, paired with a **mandatory 12-month Ongoi
 | Add-on | Price | When to offer |
 |--------|-------|---------------|
 | Extra page (beyond the 3) | $75/page | Client wants more pages |
-| Online booking link (Calendly setup) | $75 one-time | They take appointments/reservations |
-| Booking system integration (Square, Acuity, etc.) | $75 | Calendly isn't enough |
 | FAQ section | $75 | Client has a long list of repeat questions |
 | Extra revision round | $75 each | Past the 1 included round |
 | Custom logo design | $149 | Client has no logo or a bad one |

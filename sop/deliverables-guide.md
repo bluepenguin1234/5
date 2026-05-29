@@ -422,31 +422,7 @@ Quote these separately. Not included in the base $599 package.
 
 ---
 
-## 13. ONLINE BOOKING LINK (add-on — $75)
-
-**What it means:** A link or embedded widget that lets customers schedule an appointment.
-
-**Easiest option — Calendly (free tier):**
-1. Go to [calendly.com](https://calendly.com) and create a free account for the client
-2. Set up an event type (e.g. "Free Consultation — 30 minutes")
-3. Set their availability (or have them do it)
-4. Get the booking link: `https://calendly.com/businessname`
-5. Embed or link prominently — at minimum, a CTA button: `<a href="https://calendly.com/businessname">Book an Appointment</a>`
-
-**Embed option (inline widget):**
-```html
-<div class="calendly-inline-widget" data-url="https://calendly.com/businessname" style="min-width:320px;height:630px;"></div>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-```
-
-**Other options (also $75 add-on each):**
-- Square Appointments (if they use Square for payments)
-- Acuity Scheduling
-- Just a phone number CTA if they prefer calls: "Call to Book: (512) 555-0123" (free — just put it on the Services page)
-
----
-
-## 14. FAQ SECTION (add-on — $75)
+## 13. FAQ SECTION (add-on — $75)
 
 **What it means:** Accordion-style Q&A section. Helps with SEO (Google sometimes pulls FAQ answers into search results) and reduces "dumb questions" in the client's inbox.
 
@@ -482,7 +458,7 @@ $79/month, mandatory 12-month minimum. Covers everything below.
 
 ---
 
-## 15. HOSTING (Care Plan)
+## 14. HOSTING (Care Plan)
 
 **What it means:** The site lives on Vercel's servers — fast global CDN, free SSL, zero cost to you.
 
@@ -500,11 +476,11 @@ $79/month, mandatory 12-month minimum. Covers everything below.
 
 ---
 
-## 16. SECURITY UPDATES (Care Plan)
+## 15. SECURITY UPDATES (Care Plan)
 
 **What's covered:**
 - **SSL/TLS certificate** — Vercel rotates it automatically every 90 days; you verify monthly that it's valid (green padlock in the browser)
-- **Dependency patches** — if you ever use any JS library (Calendly widget, Formspree script, analytics), check for advisories quarterly and bump versions
+- **Dependency patches** — if you ever use any JS library (Formspree script, analytics), check for advisories quarterly and bump versions
 - **Form spam control** — if Formspree starts forwarding obvious junk to the client, turn on Formspree's honeypot or reCAPTCHA (free)
 - **Domain registrar lock** — confirm the client's domain has "registrar lock" enabled at Namecheap/Cloudflare so it can't be stolen via transfer
 - **DNS / Vercel account 2FA** — keep 2FA on your Vercel and GitHub accounts; you're the gatekeeper for every client site
@@ -519,7 +495,7 @@ If something breaks, fix it that same day — clients don't see "security update
 
 ---
 
-## 17. WEBSITE EDITS (Care Plan)
+## 16. WEBSITE EDITS (Care Plan)
 
 Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client** for planning purposes; the package isn't marketed with an explicit hourly cap, but watch for clients who consistently exceed an hour.
 
@@ -536,7 +512,7 @@ Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client
 **What does NOT count (quote separately):**
 - Adding a new page (+$75)
 - Redesigning a section
-- New features (booking, FAQ, e-commerce, etc.)
+- New features (FAQ, e-commerce, etc.)
 - Anything taking more than ~2 hours of work
 
 **Process:**
@@ -548,7 +524,7 @@ Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client
 
 ---
 
-## 18. BACKUP / MAINTENANCE (Care Plan)
+## 17. BACKUP / MAINTENANCE (Care Plan)
 
 **Backups (automatic):**
 - Every site lives in its own GitHub repo
@@ -558,7 +534,7 @@ Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client
 
 **Quarterly maintenance pass (do this every 3 months for every client):**
 1. Lighthouse audit in Chrome DevTools — keep Performance, Accessibility, Best Practices, SEO all ≥ 85
-2. Verify all external links still work (Google Maps embed, social links, Calendly link if any)
+2. Verify all external links still work (Google Maps embed, social links, any third-party links the client added)
 3. Confirm contact form still delivers (send a test submission yourself)
 4. Confirm the domain isn't expiring in the next 6 months (renew or remind the client to renew)
 
@@ -569,7 +545,7 @@ Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client
 
 ---
 
-## 19. SUPPORT (Care Plan)
+## 18. SUPPORT (Care Plan)
 
 **What clients get:**
 - Email support at the address you give them at launch
@@ -589,7 +565,7 @@ Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client
 
 ---
 
-## 20. CARE PLAN — 12-MONTH MINIMUM TERM
+## 19. CARE PLAN — 12-MONTH MINIMUM TERM
 
 Every Care Plan signs the client up for a **mandatory 12-month minimum**. After that it goes month-to-month.
 

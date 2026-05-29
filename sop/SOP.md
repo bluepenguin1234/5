@@ -91,8 +91,7 @@ LEAD GENERATION → COLD CALL → DISCOVERY CALL → PROPOSAL → DEPOSIT → BU
 3. "What services/products do you most want people to know about?"
 4. "Do you have a logo already? Any brand colors?"
 5. "Any competitor websites you like the look of?"
-6. "Are you looking to take bookings/reservations online, or just information?"
-7. "What's the best way for customers to contact you — phone, email, or form?"
+6. "What's the best way for customers to contact you — phone, email, or form?"
 
 **Qualify on:**
 - Do they have budget? ($599 build + $79/month for 12 months minimum — $1,547 first year)
@@ -177,7 +176,7 @@ LEAD GENERATION → COLD CALL → DISCOVERY CALL → PROPOSAL → DEPOSIT → BU
 
 **Out-of-scope requests (charge extra):**
 - Additional pages beyond package
-- New features not discussed (e-commerce, booking system, etc.)
+- New features not discussed (e-commerce, FAQ section, etc.)
 - Major redesign after approval
 
 **Out-of-scope rate:** $75/hour or flat-fee by project

@@ -61,11 +61,11 @@
 
 ## BOOKING THE DISCOVERY CALL
 
-> "Perfect — I use a simple scheduling link so you can pick the time that works best. Can I text you the link, or would email be easier?"
+> "Perfect. It's just a quick 15-minute phone call. What works better for you, tomorrow morning around 10, or Thursday afternoon around 2?"
 
-*(Send them your cal.com link)*
+*(Lock in a specific day and time on the spot. Confirm by text or email right after the call so they have it written down.)*
 
-> "Great, I'll send that over right now. It's a 15-minute Zoom or phone call — totally up to you. Looking forward to it, [Name]!"
+> "Great, [Day] at [Time] it is. I'll send a quick confirmation text right after we hang up. Looking forward to it, [Name]!"
 
 ---
 
@@ -75,11 +75,11 @@
 
 > Hi [Name],  
 >  
-> Great speaking with you! As promised, here's my scheduling link: [cal.com link]  
+> Great speaking with you! Confirming our call for [Day] at [Time]. I'll call you at [phone number] then.  
 >  
-> And here's an example of a website I built for a [similar business type]: [demo link]  
+> In the meantime, here's an example of a website I built for a [similar business type]: [demo link]  
 >  
-> Looking forward to chatting — feel free to reply here with any questions in the meantime.  
+> Feel free to reply with any questions before we talk.  
 >  
 > — Brian  
 > Frontpage Studio  

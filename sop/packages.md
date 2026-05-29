@@ -27,7 +27,6 @@ Frontpage Studio offers **one package**, paired with a **mandatory 12-month Ongo
 | Fast launch | 7-day delivery from deposit + content received |
 
 **What's NOT included (available as add-ons):**
-- Online booking / scheduling integration (+$75)
 - FAQ section (+$75)
 - Additional pages beyond 3 (+$75/page)
 - Custom logo design (+$149)
@@ -89,9 +88,7 @@ After 12 months the plan converts to month-to-month and the client can cancel wi
 | Add-on | Price | When to offer |
 |---|---|---|
 | Extra page | $75/page | Client asks for more than the 3 |
-| Online booking link (Calendly setup) | $75 one-time | They take appointments/reservations |
 | FAQ section | $75 | They have repeat questions worth surfacing |
-| Booking system integration | $75 | Square, Acuity, etc. instead of Calendly |
 | Extra revision round | $75 each | Past the 1 included round |
 | Custom logo | $149 | Client has no logo or a bad one |
 | E-commerce (up to 20 products) | $399 | They want to sell online |

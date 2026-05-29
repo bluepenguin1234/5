@@ -110,7 +110,7 @@ Sort by rating (higher rated = more to lose by not having a website). Start call
 - Best times to call: **Tuesday–Thursday, 9–11am and 2–4pm**
 
 ### Step 10: When Someone Says "Yes"
-1. Book a 20-min discovery call (use **cal.com** — free scheduling link)
+1. Book a 20-min discovery call directly: ask for two times that work this week, confirm by text or email
 2. Send your proposal: open `templates/proposal.html` in browser → print to PDF → email it with your Stripe deposit link
 3. Once the deposit clears, email the client your **intake form link** (Google Form built from `templates/client-intake.md` — see Phase 6 below for setup)
 4. Build the site using the demo templates + `/frontend-design` skill in Claude Code
@@ -217,11 +217,10 @@ These require your accounts, payment, or authentication:
 5. **Get Google Places API key** — needs your Google account
 6. **Activate Formspree** — needs your email
 7. **Set up Stripe/PayPal/Venmo** — needs your identity verification
-8. **Create a Cal.com scheduling link** — needs your signup
-9. **Set up Google Business Profile** — needs your location verification by postcard
-10. **Purchase Google Workspace / Microsoft 365 email** — if you prefer paid email
-11. **Register an LLC** — see legalzoom.com or your state's SOS website (~$50–$150)
-12. **Take actual payment from clients** — you need a live payment account
+8. **Set up Google Business Profile** — needs your location verification by postcard
+9. **Purchase Google Workspace / Microsoft 365 email** — if you prefer paid email
+10. **Register an LLC** — see legalzoom.com or your state's SOS website (~$50–$150)
+11. **Take actual payment from clients** — you need a live payment account
 
 ---
 
@@ -233,7 +232,6 @@ These require your accounts, payment, or authentication:
 | Code hosting | github.com | Free |
 | Web hosting | vercel.com | Free |
 | Contact forms | formspree.io | Free |
-| Scheduling | cal.com | Free |
 | Lead scraper | Google Cloud Console | Free tier |
 | Payments | stripe.com | 2.9% + $0.30/transaction |
 

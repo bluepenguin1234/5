@@ -163,7 +163,6 @@ Which one is closest to what you imagine for your own site? __________________
 1. **What is the single most important thing your new website should do?**
    - [ ] Get the phone to ring
    - [ ] Get form submissions or email leads
-   - [ ] Take online bookings
    - [ ] Just exist as a credibility check when people Google us
    - [ ] Drive walk-ins / foot traffic
    - [ ] Other: __________________
@@ -190,7 +189,6 @@ Which one is closest to what you imagine for your own site? __________________
 
 The base package is $599 + $79/month for 12 months. Want any of these?
 
-- [ ] **Online booking link (+$75)** — Calendly setup so customers can book appointments online
 - [ ] **FAQ section (+$75)** — accordion of common questions on the site
 - [ ] **Custom logo design (+$149)** — simple icon logo if you don't have one
 - [ ] **Extra pages (+$75 each)** — for content beyond Home / Services / Contact. Specify: __________________

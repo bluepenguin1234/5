@@ -36,7 +36,7 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 >  
 > Here's a demo for a [similar business type]: [demo link]  
 >  
-> If you're ever curious, I'd love a 10-minute call. Here's my scheduling link: [cal.com link]  
+> If you're ever curious, I'd love a 10-minute call. Just reply with a couple of times that work and we'll lock something in.  
 >  
 > No pressure at all — just wanted to make sure you had the option.  
 >  
