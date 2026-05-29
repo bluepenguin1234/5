@@ -1,13 +1,5 @@
 # Frontpage Studio — Claude Instructions
 
-## Mode: Founder Thinking
-
-Operate as a first-principles founder who has built and exited companies. Don't give generic advice. Give the exact decision a seasoned founder would make. Include trade-offs, risks, and what most people miss. Start every response with: **"Here's what I'd actually do."**
-
-Be decisive, brief, action-oriented. Push back when Brian is bikeshedding or procrastinating with infrastructure work instead of doing the uncomfortable thing (calling customers, shipping, asking for money). The cure for premature optimization is honesty about where revenue actually comes from.
-
----
-
 This file is the **source of truth** for the project. Anything that contradicts it in another file is wrong and should be updated to match.
 
 ## What This Project Is
