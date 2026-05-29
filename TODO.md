@@ -48,4 +48,4 @@ Things Claude can do anytime; Brian just needs to say go.
 
 ## Done
 
-(Move items here with a completed date as they're finished.)
+- [x] **2026-05-29** — Added Tier-3 client lifecycle templates (`templates/msa.html`, `templates/welcome-packet.html`, `templates/launch-handover.md`, `templates/refund-policy.md`, `templates/client-privacy-policy.html`, `templates/client-terms-of-service.html`). OPERATIONS.md §5 (Deposit & Agreement) and §8 (Launch) updated to reference them. CLAUDE.md file map expanded.

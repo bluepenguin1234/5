@@ -349,9 +349,13 @@ The send-email template is in [Part 3 §4](#4-sending-the-proposal).
 
 ## 5. Deposit & Agreement
 
-**Tool:** Stripe (set up in Appendix A).
+**Tools:** Stripe (set up in Appendix A) + `templates/msa.html`.
 
-**Verbal/email agreement is enough to start.** A simple "Yes, let's do it!" email reply combined with payment of the deposit constitutes acceptance of the attached proposal. For B2B services at this price point, this is legally sufficient.
+**For your first ~10 clients:** a "Yes, let's do it!" email reply combined with payment of the deposit constitutes acceptance of the attached proposal. For B2B services at this price point, this is legally sufficient and is what most freelancers use.
+
+**For more deliberate engagements (recommended once you're past first few clients):** attach the Master Service Agreement (`templates/msa.html` → print to PDF) alongside the proposal. Both parties sign before the deposit is paid. The MSA covers scope, payment, the 12-month Care Plan term, domain pass-through, refunds, IP ownership, and governing law. It references `templates/refund-policy.md` for the refund schedule by stage.
+
+**After the deposit clears:** send the welcome packet (`templates/welcome-packet.html` → print to PDF, attach to the deposit confirmation email). It orients the client on what they paid for, the 7-day timeline, what you need from them, and how the Care Plan works after launch. Email template is in Part 3 §5.
 
 **Payment terms:**
 - 50% deposit ($299.50) before build starts
@@ -428,10 +432,13 @@ A "round" = one email with a consolidated list of changes. Not ongoing back-and-
 - [ ] Vercel project connected to custom domain
 - [ ] SSL certificate active (Vercel handles automatically)
 - [ ] Contact form working end-to-end
+- [ ] `/privacy.html` deployed (copy from `templates/client-privacy-policy.html`, fill placeholders)
+- [ ] `/terms.html` deployed (copy from `templates/client-terms-of-service.html`, fill placeholders)
+- [ ] Footer links to /privacy.html and /terms.html present on every page
 - [ ] Google Analytics / Search Console submitted
 - [ ] Sitemap submitted to Google Search Console
 
-**Handoff message** ([Part 3 §9](#9-launch-confirmation) has the full email).
+**Handoff:** send the launch confirmation email (Part 3 §9) plus the personalized launch handover doc (`templates/launch-handover.md` → fill in placeholders → send as PDF or share as a Google Doc). The handover doc is the client's single reference for every account, every billing date, every "how do I" question after launch.
 
 ---
 

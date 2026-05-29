@@ -81,7 +81,13 @@ web/
 ├── templates/
 │   ├── proposal.html        ← Client proposal (print to PDF, attach to email)
 │   ├── invoice.html         ← Client invoice (print to PDF)
+│   ├── msa.html             ← Master Service Agreement (print to PDF, send pre-deposit)
+│   ├── welcome-packet.html  ← Welcome PDF (print + attach to deposit confirmation email)
+│   ├── launch-handover.md   ← Launch handover doc (send at go-live with account info)
+│   ├── refund-policy.md     ← Refund and cancellation policy (referenced by MSA, also for agency site)
 │   ├── client-intake.md     ← Master intake questionnaire (paste into Google Form)
+│   ├── client-privacy-policy.html ← Drop-in /privacy.html template for client sites
+│   ├── client-terms-of-service.html ← Drop-in /terms.html template for client sites
 │   └── sheets/              ← Import-ready CSVs for the command-center Google Sheet
 │       ├── README.md        ← 5-minute setup walkthrough
 │       ├── leads.csv        ← Leads tab structure
