@@ -81,7 +81,13 @@ web/
 ├── templates/
 │   ├── proposal.html        ← Client proposal (print to PDF, attach to email)
 │   ├── invoice.html         ← Client invoice (print to PDF)
-│   └── client-intake.md     ← Master intake questionnaire (paste into Google Form)
+│   ├── client-intake.md     ← Master intake questionnaire (paste into Google Form)
+│   └── sheets/              ← Import-ready CSVs for the command-center Google Sheet
+│       ├── README.md        ← 5-minute setup walkthrough
+│       ├── leads.csv        ← Leads tab structure
+│       ├── active-builds.csv ← Active Builds tab structure
+│       ├── care-plan-clients.csv ← Care Plan Clients tab structure
+│       └── revenue.csv      ← Revenue tab structure
 │
 └── TODO.md                  ← Outstanding work and tasks (Brian and Claude)
 ```

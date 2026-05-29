@@ -16,11 +16,7 @@ These need Brian's accounts, payment, or hands-on action. Claude can't do them r
 - [ ] **Activate Stripe**, create the two products (Business Presence Package one-time + Care Plan recurring) and generate the three Payment Links (deposit / launch / subscription)
 - [ ] **Set up the Stripe Customer Portal** (Stripe dashboard → Settings → Customer Portal → enable + configure). Grab the portal URL and paste it into the launch email template so clients can self-serve subscription management (update card, view history). Removes most billing-support requests.
 - [ ] **Build the client-intake Google Form** from `templates/client-intake.md`
-- [ ] **Build the "command center" Google Sheet.** One sheet, multiple tabs:
-  - **Leads** — scraper writes here. Columns: Business Name, Phone, Address, Type, Date Added, Status (new/called/VM/emailed/interested/closed/dead), Last Contact Date, Next Action Date, Notes, Demo URL.
-  - **Active Builds** — clients between deposit and launch. Columns: Client, Deposit Date, Day of Build (1–7), Content Received?, Staging URL, Launch Target.
-  - **Care Plan Clients** — Columns: Client, Launch Date, Month-11 Reminder Date, Month-12 Renewal Date, Hours Used This Month, Last Edit Date, Domain Renewal Date.
-  - **Revenue** — monthly totals (build fees + Care Plan + add-ons + domain pass-through). For taxes and visibility.
+- [ ] **Build the "command center" Google Sheet.** Import the four CSVs in `templates/sheets/` as four tabs. Full 5-minute walkthrough (with formula spec and dropdown values) lives in `templates/sheets/README.md`. Tabs: Leads, Active Builds, Care Plan Clients, Revenue.
 - [ ] **Set up the launch-day calendar reminder routine.** When a client launches, create three Google Calendar events tied to their launch date: (1) `+11 months` → send continuous-hosting email (template in `BUILD-GUIDE.md` §19), (2) `+12 months` → check usage + renewal-decision touchpoint, (3) quarterly recurring → maintenance pass (Lighthouse + link check + domain check, per `BUILD-GUIDE.md` §17). Zero infrastructure, zero forgotten emails.
 - [ ] **Get a Google Places API key** and install Python + scraper requirements so `scraper/find_leads.py` can run
 - [ ] **Decide which agency site to ship live**: `index.html` (peach/blue bento) or `index-v2.html` (cream/rust editorial)
