@@ -151,11 +151,40 @@ The remaining 11 months of the Care Plan are billed monthly on the launch-day da
 
 ---
 
-## PAYMENT SETUP
-Before your first client call, have ONE of these ready to accept payment:
-- **Venmo** (easiest, personal) — @yourname
-- **PayPal** business account — paypal.com/us/business
-- **Stripe** (most professional) — stripe.com → create account → share payment link
+## PAYMENT SETUP — Stripe
+
+Before your first client call, have Stripe set up to accept the deposit, launch payment, and recurring Care Plan billing.
+
+### 1. Activate Stripe (~30 minutes + 1-2 days for verification)
+1. Go to **stripe.com** → start application
+2. Enter your business info (sole proprietor is fine to start)
+3. Connect your bank account (where payouts will land)
+4. Wait for Stripe to verify (usually a few hours to a couple of days)
+
+### 2. Create your two products (Dashboard → Products)
+- **Business Presence Package** — one-time, $599
+- **Ongoing Care Plan** — recurring, $79/month
+
+### 3. Generate three Payment Links (Dashboard → Payment Links)
+Reuse these same three URLs for every client:
+- **Deposit link:** $299.50 one-time (50% of build)
+- **Launch link:** $378.50 one-time ($299.50 balance + first $79 of Care Plan)
+- **Subscription link:** $79/month recurring (starts at launch, runs for the 12-month minimum then continues month-to-month)
+
+Save the three URLs somewhere you can grab them fast (a note, email signature, password manager).
+
+### 4. Wire the links into the proposal and invoice templates
+**Todo (do this after step 3):**
+- Update `templates/proposal.html` so the "How to accept" section has a `[STRIPE_DEPOSIT_LINK]` placeholder you paste per client
+- Update `templates/invoice.html` with a `[STRIPE_LAUNCH_LINK]` placeholder for the launch payment
+- Update `sop/email-templates.md` so the proposal-send and final-invoice emails reference the same placeholders consistently
+
+Once those templates are wired, every proposal you generate has the simple "reply 'I accept' + click to pay" flow baked in.
+
+### 5. Stripe fees and the 12-month minimum
+- Card transactions: **2.9% + $0.30**. Roughly $48 per client/year on $1,547 revenue.
+- ACH bank debit: **1.5%, capped at $5** — offer to clients who want to save you the card fee on the big build payment.
+- **12-month minimum isn't auto-enforced by Stripe.** If a client cancels the subscription early, manually generate a one-off Stripe invoice for the remaining months. Rare.
 
 ---
 
