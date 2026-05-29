@@ -1,5 +1,7 @@
 # Frontpage Studio — Claude Instructions
 
+This file is the **source of truth** for the project. Anything that contradicts it in another file is wrong and should be updated to match.
+
 ## What This Project Is
 
 Frontpage Studio is Brian's web design business targeting local businesses with no website. Cold call outreach model. Brian builds the sites, handles hosting, and does the sales calls himself.
@@ -58,32 +60,40 @@ All sites (agency site + client demos) use this design system. Always follow it 
 
 ```
 web/
-├── index.html                  ← Agency website (Frontpage Studio's own site)
-├── CLAUDE.md                   ← This file
-├── LAUNCH-GUIDE.md             ← Step-by-step launch checklist for Brian
-├── vercel.json                 ← Vercel deployment config (static HTML)
+├── CLAUDE.md                ← Source of truth. Facts, pricing, design rules, file map.
+├── OPERATIONS.md            ← The playbook. Selling, building, launching, billing. All scripts + email templates + setup appendix.
+├── BUILD-GUIDE.md           ← Technical reference. How to actually build each feature (forms, schema, GBP, hosting, care-plan ops).
+│
+├── index.html               ← Agency website (Frontpage Studio's own site)
+├── vercel.json              ← Vercel deployment config
 ├── .gitignore
 │
 ├── demos/
-│   ├── restaurant/index.html   ← Maplewood Kitchen (Cormorant Garamond, dark luxury)
-│   ├── barbershop/index.html   ← Sharp & Co. (Bebas Neue, navy/gold, classic)
-│   └── plumber/index.html      ← Tucker Plumbing (Barlow Condensed, blue/orange)
+│   ├── restaurant/index.html ← Maplewood Kitchen (Cormorant Garamond, dark luxury)
+│   ├── barbershop/index.html ← Sharp & Co. (Bebas Neue, navy/gold, classic)
+│   └── plumber/index.html    ← Tucker Plumbing (Barlow Condensed, blue/orange)
 │
 ├── scraper/
-│   ├── find_leads.py           ← Google Places API scraper (finds businesses with no website)
+│   ├── find_leads.py        ← Google Places API scraper (finds businesses with no website)
 │   └── requirements.txt
 │
-├── sop/
-│   ├── SOP.md                  ← Master business operating procedure
-│   ├── packages.md             ← Package breakdown (what each plan includes)
-│   ├── pricing.md              ← Pricing strategy, objection handling, revenue projections
-│   ├── deliverables-guide.md   ← How to set up every feature (SEO, forms, GMB, etc.)
-│   ├── cold-call-script.md     ← Word-for-word call scripts + objection handling
-│   └── email-templates.md      ← All email templates (outreach through launch)
+├── templates/
+│   ├── proposal.html        ← Client proposal (print to PDF, attach to email)
+│   ├── invoice.html         ← Client invoice (print to PDF)
+│   ├── msa.html             ← Master Service Agreement (Phase 2, introduce after first ~10 clients)
+│   ├── launch-handover.md   ← Launch handover doc (send at go-live with account info)
+│   ├── refund-policy.md     ← Refund and cancellation policy (referenced by MSA)
+│   ├── client-intake.md     ← Master intake questionnaire (paste into Google Form)
+│   ├── client-privacy-policy.html ← Drop-in /privacy.html template for client sites
+│   ├── client-terms-of-service.html ← Drop-in /terms.html template for client sites
+│   └── sheets/              ← Import-ready CSVs for the command-center Google Sheet
+│       ├── README.md        ← 5-minute setup walkthrough
+│       ├── leads.csv        ← Leads tab structure
+│       ├── active-builds.csv ← Active Builds tab structure
+│       ├── care-plan-clients.csv ← Care Plan Clients tab structure
+│       └── revenue.csv      ← Revenue tab structure
 │
-└── templates/
-    ├── proposal.html           ← Client proposal (print to PDF)
-    └── invoice.html            ← Client invoice (print to PDF)
+└── TODO.md                  ← Outstanding work and tasks (Brian and Claude)
 ```
 
 ---
@@ -111,27 +121,64 @@ web/
 
 ---
 
-## Key SOPs to Know
+## Key facts (the canonical list)
 
-- **Revisions:** Package includes 1 round of revisions. A "round" = one email with all feedback consolidated. Extra revisions = $75/hr.
-- **Payment:** 50% deposit before build starts, 50% at launch + first month of $79 Care Plan. Remaining 11 months billed monthly.
-- **Care Plan term:** Mandatory 12-month minimum. Month-to-month after that.
-- **Delivery:** 7 business days from deposit + content received.
-- **Hosting:** Vercel free tier. Push to GitHub, connect repo to Vercel, add custom domain. SSL is automatic.
-- **Contact forms:** Formspree (formspree.io) — free up to 50 submissions/month per form.
-- **Search-ready setup (included):** Title tags, meta descriptions, heading hierarchy, alt text, consistent NAP, LocalBusiness JSON-LD schema, Google Business Profile setup & optimization.
+- **Package:** Business Presence Package, $599 one-time, 3 pages (Home, Services, Contact), 7-day delivery
+- **Care Plan:** $79/month, **mandatory 12-month minimum**, then month-to-month with 30 days' notice
+- **Care Plan covers:** hosting, security updates, website edits, backup/maintenance, support
+- **First-year total per client:** $1,547 ($599 build + $948 care plan)
+- **Payment schedule:** $299.50 deposit at signing → $378.50 at launch (balance + first month care) → $79/month for 11 more months. Plus domain cost (~$12 to $15) as a separate pass-through line item on the launch invoice if Brian is registering one for them.
+- **Revisions:** 1 round included. Extras $75 each.
+- **Hosting:** Vercel free tier (Brian's cost: $0)
+- **Contact forms:** Formspree
+- **Payments:** Stripe (Payment Links + Subscription)
+- **Search-ready setup (included):** titles, meta, heading hierarchy, alt text, consistent NAP, LocalBusiness JSON-LD, Google Business Profile setup
+- **Add-ons (flat $75 each):** extra page, FAQ section, extra revision round
+- **Add-ons (other):** custom logo $149, e-commerce $399, rush delivery +$200
+- **Domain:** Brian always purchases the domain through Namecheap. Cost passes through to the client at the registrar's actual price (~$12 to $15 for `.com`) as a separate line item on the launch invoice. No markup, no setup fee. Each annual renewal is re-billed at the same actual cost.
+
+For detailed scripts, email templates, build process, and launch setup: see `OPERATIONS.md`.
+For how to technically build each feature: see `BUILD-GUIDE.md`.
 
 ---
 
-## What Brian Still Needs to Do (One-Time Setup)
+## Cross-file audit rule (MANDATORY before completing any business-rule change)
 
-These require Brian to act — Claude cannot do them:
-1. Buy domain (frontpagestudio.com or frontpage.studio)
-2. Set up Zoho Mail for brian@frontpagestudio.com (free)
-3. Create GitHub account + push this repo
-4. Connect repo to Vercel (vercel.com) and add custom domain
-5. Sign up for Formspree and replace `YOUR_FORM_ID` in index.html
-6. Get Google Places API key and add to `.env` for the scraper
-7. Set up Stripe or PayPal for client billing
+When **any** of the following change, run a full audit across the entire repo before marking the task complete:
 
-Full instructions in `LAUNCH-GUIDE.md`.
+- Prices (build fee, Care Plan, add-ons, domain pass-through)
+- Term length (Care Plan months, revision rounds)
+- Feature lists (what's in the package, what's in the Care Plan, what's an add-on)
+- Package contents (number of pages, included items)
+- Care Plan deliverables
+- Domain handling policy
+- Discovery / sales process (cold-call script, email templates)
+- Anything else listed under "Key facts" above
+
+### The audit procedure
+
+1. **List every file that could reference the changing fact** (use `grep -rn` on the old value across the whole repo, not just files you remember editing). At minimum check:
+   - `CLAUDE.md` (this file)
+   - `OPERATIONS.md`
+   - `BUILD-GUIDE.md`
+   - `TODO.md`
+   - `index.html`
+   - `templates/proposal.html`, `templates/invoice.html`, `templates/client-intake.md`
+   - `demos/*/index.html` (any demo that hardcoded a price or policy)
+   - **Any new files added since this rule was last updated** — re-grep the whole repo, do not rely on this list being exhaustive
+
+2. **Update every match in one pass.** Do not split into multiple commits where some files have the new rule and others have the old one.
+
+3. **Verify with a second grep on the OLD value.** If anything still matches, you missed a file. Repeat step 2.
+
+4. **Verify with a grep on the NEW value** to confirm consistency of wording across the whole repo (a list of 5 features should read the same in every place, not "4 features" in one file and "5 features" in another).
+
+5. **Only after steps 1–4 succeed**, write the commit and push. Do not declare the task done before the audit passes.
+
+Marketing copy drifts. Numbers drift. Feature lists drift. The cure is not memory — it is `grep`. Run it every time.
+
+---
+
+## One-time setup (Brian)
+
+Full walkthrough in `OPERATIONS.md` Appendix. Current task list lives in `TODO.md`.

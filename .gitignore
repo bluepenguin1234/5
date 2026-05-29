@@ -1,5 +1,6 @@
 .env
 *.csv
+!templates/sheets/*.csv
 scraper/__pycache__/
 scraper/*.pyc
 .DS_Store
