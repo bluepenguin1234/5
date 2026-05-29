@@ -18,7 +18,7 @@ Everything we need from a new client before the build starts. This document is t
 
 ### Alternative: Send this as an email
 
-Copy the intake questions (Sections 1 to 12 below) into an email. Ask the client to reply with their answers and attach the logo plus photos as attachments. Less tidy but works for any client. Use this if Google Form upload is a problem.
+Copy the intake questions (Sections 1 to 13 below) into an email. Ask the client to reply with their answers and attach the logo plus photos as attachments. Less tidy but works for any client. Use this if Google Form upload is a problem.
 
 ### Alternative: Send this document as a Google Doc
 
@@ -173,19 +173,48 @@ Which one is closest to what you imagine for your own site? __________________
 
 ---
 
-## Section 9 — Domain and Email
+## Section 9 — Domain
 
-1. **Do you already own a domain?** (e.g. yourbusiness.com)
-   - [ ] Yes — domain: __________________ , registered with: __________________
-   - [ ] No — please help me buy one (we'll guide you, ~$12/year)
+A domain is the address people type to find your site (like `yourbusiness.com`). You always own the domain personally — we never hold it for you. Cost is around $12 to $15 per year, paid directly to the registrar. We do not mark up the annual fee.
 
-2. **Do you want a business email on your domain?** (e.g. hello@yourbusiness.com)
-   - [ ] Yes — I'll set this up after launch
-   - [ ] No, I'll keep using my current email
+### 1. Do you already own a domain?
+- [ ] **Yes** — domain: __________________ , registered with (Namecheap, GoDaddy, etc.): __________________
+- [ ] **No, I need one**
+
+(If yes: we'll ask for the registrar login after the deposit so we can point your new site at the domain. You stay the owner. We never change your password.)
+
+### 2. If you don't own one yet, what would you like it to be?
+List your top 3 choices in order. First choices are often already taken, so a backup or two saves time.
+
+1. First choice: __________________
+2. Second choice: __________________
+3. Third choice: __________________
+
+**Tips:**
+- Don't include `www.` or `https://`. Just the domain like `tuckerplumbing.com`.
+- Common patterns that work: `[businessname].com`, `[city][businessname].com`, `[businessname]llc.com`, `[businessname]s.com` (with an "s")
+- `.com` is best when available; `.co` or `.us` are decent backups; avoid `.biz` and `.info`
+
+### 3. Who buys the domain?
+- [ ] **I'll buy it myself** (free) — we'll send you a 2-minute walkthrough for Namecheap or Cloudflare and the exact name to register. Annual cost (~$12 to $15) is billed by them directly to you.
+- [ ] **Have Brian handle the purchase and setup** (**+$25 one-time setup**, plus the ~$12 to $15/year domain fee you reimburse) — we register it in your name with your account so you stay the owner.
+
+### 4. Domain renewals
+Your domain renews automatically each year at ~$12 to $15. We'll email you 60 days and 30 days before renewal as a reminder, even though the registrar handles billing directly. Losing a domain is bad, so we double-check.
 
 ---
 
-## Section 10 — Optional Add-ons
+## Section 10 — Business Email on Your Domain (optional)
+
+A professional email like `hello@yourbusiness.com` (vs. `yourbusiness@gmail.com`) costs nothing if you use Zoho Mail's free tier (one inbox).
+
+- [ ] **Yes, I'd like one** — we'll help you set up Zoho Mail (free) after launch
+- [ ] **No, I'll keep my current email** — your website contact form will still deliver to whatever email you give us in Section 2
+- [ ] **Not sure** — we'll discuss on the call
+
+---
+
+## Section 11 — Optional Add-ons
 
 The base package is $599 + $79/month for 12 months. Want any of these?
 
@@ -194,11 +223,13 @@ The base package is $599 + $79/month for 12 months. Want any of these?
 - [ ] **Extra pages (+$75 each)** — for content beyond Home / Services / Contact. Specify: __________________
 - [ ] **Rush delivery 48 hours (+$200)** — if you need it faster than 7 days
 
+(Domain purchase help (+$25) is selected in Section 9 above if you chose "Have Brian handle the purchase".)
+
 Total add-ons selected: $__________________
 
 ---
 
-## Section 11 — Anything Else?
+## Section 12 — Anything Else?
 
 Anything we haven't asked about that matters? Stories about the business, awards, certifications, weird hours, accessibility info, language options, anything we should know.
 
@@ -206,7 +237,7 @@ Free text: __________________
 
 ---
 
-## Section 12 — Sign-off
+## Section 13 — Sign-off
 
 - [ ] I have read the proposal and agree to the terms (Business Presence Package $599 one-time + Ongoing Care Plan $79/month for a 12-month minimum)
 - [ ] I have paid the deposit ($299.50)
