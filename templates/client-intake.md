@@ -175,11 +175,11 @@ Which one is closest to what you imagine for your own site? __________________
 
 ## Section 9 — Domain
 
-A domain is the address people type to find your site (like `yourbusiness.com`). You always own the domain personally — we never hold it for you. Cost is around $12 to $15 per year, paid directly to the registrar. We do not mark up the annual fee.
+A domain is the address people type to find your site (like `yourbusiness.com`). **Frontpage Studio handles purchasing the domain for you at no markup** — we buy it through Namecheap, then pass the actual cost (around $12 to $15 per year) through to you as a separate line item. No setup fee.
 
 ### 1. Do you already own a domain?
 - [ ] **Yes** — domain: __________________ , registered with (Namecheap, GoDaddy, etc.): __________________
-- [ ] **No, I need one**
+- [ ] **No, I need one** (we'll buy it for you, see below)
 
 (If yes: we'll ask for the registrar login after the deposit so we can point your new site at the domain. You stay the owner. We never change your password.)
 
@@ -195,12 +195,10 @@ List your top 3 choices in order. First choices are often already taken, so a ba
 - Common patterns that work: `[businessname].com`, `[city][businessname].com`, `[businessname]llc.com`, `[businessname]s.com` (with an "s")
 - `.com` is best when available; `.co` or `.us` are decent backups; avoid `.biz` and `.info`
 
-### 3. Who buys the domain?
-- [ ] **I'll buy it myself** (free) — we'll send you a 2-minute walkthrough for Namecheap or Cloudflare and the exact name to register. Annual cost (~$12 to $15) is billed by them directly to you.
-- [ ] **Have Brian handle the purchase and setup** (**+$25 one-time setup**, plus the ~$12 to $15/year domain fee you reimburse) — we register it in your name with your account so you stay the owner.
-
-### 4. Domain renewals
-Your domain renews automatically each year at ~$12 to $15. We'll email you 60 days and 30 days before renewal as a reminder, even though the registrar handles billing directly. Losing a domain is bad, so we double-check.
+### 3. How the domain is billed
+- We buy your domain through Namecheap and add the exact cost (~$12 to $15 for `.com`, sometimes more for premium names) to your launch invoice as a separate line item. **No markup, no setup fee.**
+- Each year at renewal we re-bill you the same actual cost. We'll send a reminder 30 days before.
+- You always own the domain. If you ever want to take over the registrar account yourself, we hand it over within 24 hours.
 
 ---
 
@@ -223,9 +221,9 @@ The base package is $599 + $79/month for 12 months. Want any of these?
 - [ ] **Extra pages (+$75 each)** — for content beyond Home / Services / Contact. Specify: __________________
 - [ ] **Rush delivery 48 hours (+$200)** — if you need it faster than 7 days
 
-(Domain purchase help (+$25) is selected in Section 9 above if you chose "Have Brian handle the purchase".)
-
 Total add-ons selected: $__________________
+
+(Your domain cost passes through separately on the launch invoice at the registrar's actual price — not an add-on.)
 
 ---
 

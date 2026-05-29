@@ -121,6 +121,7 @@ One-time build fee.
 |---|---|---|
 | Deposit | $299.50 | At signing (50% of build) |
 | Launch payment | $378.50 | At launch (50% balance + first month Care Plan) |
+| Domain (pass-through) | ~$12–$15 | At launch, only if Brian is registering the domain. Re-billed at cost each annual renewal. |
 | Months 2–12 | $79/month | Auto-charged on launch-date anniversary |
 
 ---
@@ -137,7 +138,8 @@ Quote separately. Not in the base $599 package.
 | Custom logo design | $149 | Client has no logo or a bad one |
 | E-commerce (up to 20 products) | $399 | They want to sell online |
 | Rush delivery (48 hrs) | +$200 | They need it fast |
-| Domain registration + setup | $25 + cost of domain | Client doesn't have a domain yet |
+
+**Domain purchase is not an add-on.** Frontpage Studio always buys the domain on the client's behalf through Namecheap and passes the actual cost (~$12 to $15 for `.com`) through to the client as a separate line item on the launch invoice. No markup. No setup fee. Each annual renewal is re-billed at the same actual cost.
 
 ---
 
@@ -354,6 +356,7 @@ The send-email template is in [Part 3 §4](#4-sending-the-proposal).
 **Payment terms:**
 - 50% deposit ($299.50) before build starts
 - 50% balance ($299.50) + first month Care Plan ($79) = $378.50 at launch
+- Plus domain pass-through (~$12 to $15) at launch if Brian is registering one for the client. Re-billed at cost annually.
 - Then $79/month auto-charged for 11 more months
 
 **Never start building without a deposit.** Even with nice people. One ghost will teach you this lesson.
@@ -421,7 +424,7 @@ A "round" = one email with a consolidated list of changes. Not ongoing back-and-
 **Pre-launch checklist:**
 - [ ] Client approved final version
 - [ ] Remaining 50% payment received (Stripe launch link)
-- [ ] Domain purchased or transferred (client pays for domain)
+- [ ] Domain purchased through Namecheap (Brian's account, billed back to client at cost on the launch invoice)
 - [ ] Vercel project connected to custom domain
 - [ ] SSL certificate active (Vercel handles automatically)
 - [ ] Contact form working end-to-end
@@ -548,7 +551,7 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 > **Business Presence Package** — $599 one-time + $79/month (12-month minimum)
 > **What's included:** 3-page website (Home, Services, Contact), mobile-friendly, contact form + click-to-call, reviews section, photo gallery, hours + service area, Google Maps embed, email signup, Google Business Profile setup, search-ready setup
 > **Timeline:** 7 days from deposit
-> **Payment:** $299.50 deposit now (50% of build), $378.50 at launch (50% balance + first month Care Plan), then $79/month for 11 more months
+> **Payment:** $299.50 deposit now (50% of build), $378.50 at launch (50% balance + first month Care Plan) plus your domain pass-through (~$12 to $15 at cost), then $79/month for 11 more months
 > **First-year total:** $1,547
 >
 > To move forward:
@@ -627,7 +630,7 @@ Copy-paste ready. Always customize the `[brackets]` before sending.
 >
 > Pay here: [STRIPE_LAUNCH_LINK]
 >
-> This is the $299.50 build balance + the first $79 of your Care Plan ($378.50 total). After this payment, your card auto-charges $79 on this same date each month for the next 11 months.
+> This is the $299.50 build balance + the first $79 of your Care Plan ($378.50 total)[, plus the $[X.XX] domain pass-through]. After this payment, your card auto-charges $79 on this same date each month for the next 11 months.
 >
 > As soon as it clears I deploy to your domain and send launch confirmation.
 >

@@ -117,14 +117,15 @@ web/
 - **Care Plan:** $79/month, **mandatory 12-month minimum**, then month-to-month with 30 days' notice
 - **Care Plan covers:** hosting, security updates, website edits, backup/maintenance, support
 - **First-year total per client:** $1,547 ($599 build + $948 care plan)
-- **Payment schedule:** $299.50 deposit at signing → $378.50 at launch (balance + first month care) → $79/month for 11 more months
+- **Payment schedule:** $299.50 deposit at signing → $378.50 at launch (balance + first month care) → $79/month for 11 more months. Plus domain cost (~$12 to $15) as a separate pass-through line item on the launch invoice if Brian is registering one for them.
 - **Revisions:** 1 round included. Extras $75 each.
 - **Hosting:** Vercel free tier (Brian's cost: $0)
 - **Contact forms:** Formspree
 - **Payments:** Stripe (Payment Links + Subscription)
 - **Search-ready setup (included):** titles, meta, heading hierarchy, alt text, consistent NAP, LocalBusiness JSON-LD, Google Business Profile setup
-- **Add-ons (flat $75 each):** extra page, FAQ section, extra revision round, booking-system integration
-- **Add-ons (other):** custom logo $149, e-commerce $399, rush delivery +$200, domain registration $25 + cost
+- **Add-ons (flat $75 each):** extra page, FAQ section, extra revision round
+- **Add-ons (other):** custom logo $149, e-commerce $399, rush delivery +$200
+- **Domain:** Brian always purchases the domain through Namecheap. Cost passes through to the client at the registrar's actual price (~$12 to $15 for `.com`) as a separate line item on the launch invoice. No markup, no setup fee. Each annual renewal is re-billed at the same actual cost.
 
 For detailed scripts, email templates, build process, and launch setup: see `OPERATIONS.md`.
 For how to technically build each feature: see `BUILD-GUIDE.md`.
