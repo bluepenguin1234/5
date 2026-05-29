@@ -111,11 +111,11 @@ Sort by rating (higher rated = more to lose by not having a website). Start call
 
 ### Step 10: When Someone Says "Yes"
 1. Book a 20-min discovery call (use **cal.com** — free scheduling link)
-2. Send your proposal: open `templates/proposal.html` in browser → print to PDF → email it
-3. Collect 50% deposit upfront (use **Venmo**, **PayPal**, or **Stripe**)
+2. Send your proposal: open `templates/proposal.html` in browser → print to PDF → email it with your Stripe deposit link
+3. Once the deposit clears, email the client your **intake form link** (Google Form built from `templates/client-intake.md` — see Phase 6 below for setup)
 4. Build the site using the demo templates + `/frontend-design` skill in Claude Code
 5. Send for review → revisions → launch
-6. Collect remaining 50%
+6. Collect remaining 50% (Stripe launch link)
 
 ---
 
@@ -185,6 +185,24 @@ Once those templates are wired, every proposal you generate has the simple "repl
 - Card transactions: **2.9% + $0.30**. Roughly $48 per client/year on $1,547 revenue.
 - ACH bank debit: **1.5%, capped at $5** — offer to clients who want to save you the card fee on the big build payment.
 - **12-month minimum isn't auto-enforced by Stripe.** If a client cancels the subscription early, manually generate a one-off Stripe invoice for the remaining months. Rare.
+
+---
+
+## PHASE 6 — Client Intake Form (one-time, ~10 min)
+
+After a client pays the deposit, you need their logo, photos, hours, services, and style preferences before you can build. The easiest way to collect all of it is a Google Form.
+
+### Build the form once
+1. Go to **forms.google.com** → blank form → name it "Frontpage Studio — New Client Intake"
+2. Open `templates/client-intake.md` and copy each question into the form, matching the question types (short answer / paragraph / multiple choice / file upload)
+3. For the **Logo** and **Photos** sections, use Google's **File upload** question type. Allow image + PDF. Cap at 10MB. Allow multiple files for photos.
+4. Settings → Responses → enable **Collect email addresses** + **Link to Google Sheet** (so every submission auto-lands in one spreadsheet)
+5. Click **Send** → copy the form link → save it somewhere you can grab fast (notes app, password manager, email signature)
+
+### Use the form for every client
+- After their deposit clears, email the form link (template in `sop/email-templates.md` section 6)
+- When they submit, check the linked Google Sheet for their answers + Google Drive folder for their files
+- 7-day clock starts from the moment they submit
 
 ---
 

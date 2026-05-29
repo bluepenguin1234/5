@@ -83,7 +83,8 @@ web/
 │
 └── templates/
     ├── proposal.html           ← Client proposal (print to PDF)
-    └── invoice.html            ← Client invoice (print to PDF)
+    ├── invoice.html            ← Client invoice (print to PDF)
+    └── client-intake.md        ← Master intake questionnaire (paste into Google Form)
 ```
 
 ---
