@@ -132,17 +132,40 @@ For how to technically build each feature: see `BUILD-GUIDE.md`.
 
 ---
 
-## Cross-file audit rule
+## Cross-file audit rule (MANDATORY before completing any business-rule change)
 
-When any business rule changes (pricing, term length, feature lists, package contents, add-on prices, care plan deliverables), audit **all three** root docs and the templates in one pass:
+When **any** of the following change, run a full audit across the entire repo before marking the task complete:
 
-1. `CLAUDE.md` (this file)
-2. `OPERATIONS.md`
-3. `BUILD-GUIDE.md`
-4. `index.html`, `index-v2.html`
-5. `templates/proposal.html`, `templates/invoice.html`, `templates/client-intake.md`
+- Prices (build fee, Care Plan, add-ons, domain pass-through)
+- Term length (Care Plan months, revision rounds)
+- Feature lists (what's in the package, what's in the Care Plan, what's an add-on)
+- Package contents (number of pages, included items)
+- Care Plan deliverables
+- Domain handling policy
+- Discovery / sales process (cold-call script, email templates)
+- Anything else listed under "Key facts" above
 
-Do not assume any file is in sync. Marketing copy drifts; numbers drift; feature lists drift. Always do the find-and-replace and then verify with a grep for the old values.
+### The audit procedure
+
+1. **List every file that could reference the changing fact** (use `grep -rn` on the old value across the whole repo, not just files you remember editing). At minimum check:
+   - `CLAUDE.md` (this file)
+   - `OPERATIONS.md`
+   - `BUILD-GUIDE.md`
+   - `TODO.md`
+   - `index.html`, `index-v2.html`
+   - `templates/proposal.html`, `templates/invoice.html`, `templates/client-intake.md`
+   - `demos/*/index.html` (any demo that hardcoded a price or policy)
+   - **Any new files added since this rule was last updated** — re-grep the whole repo, do not rely on this list being exhaustive
+
+2. **Update every match in one pass.** Do not split into multiple commits where some files have the new rule and others have the old one.
+
+3. **Verify with a second grep on the OLD value.** If anything still matches, you missed a file. Repeat step 2.
+
+4. **Verify with a grep on the NEW value** to confirm consistency of wording across the whole repo (a list of 5 features should read the same in every place, not "4 features" in one file and "5 features" in another).
+
+5. **Only after steps 1–4 succeed**, write the commit and push. Do not declare the task done before the audit passes.
+
+Marketing copy drifts. Numbers drift. Feature lists drift. The cure is not memory — it is `grep`. Run it every time.
 
 ---
 
