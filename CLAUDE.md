@@ -83,8 +83,7 @@ web/
 │   ├── invoice.html         ← Client invoice (print to PDF)
 │   └── client-intake.md     ← Master intake questionnaire (paste into Google Form)
 │
-└── todo/
-    └── TODO.md              ← Outstanding work and tasks (Brian and Claude)
+└── TODO.md                  ← Outstanding work and tasks (Brian and Claude)
 ```
 
 ---
