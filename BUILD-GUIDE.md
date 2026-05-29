@@ -1,583 +1,214 @@
-# Frontpage Studio — Deliverables Setup Guide
+# Frontpage Studio — Build Guide
 
-How to build and set up every feature in the Business Presence Package, plus the optional add-ons, plus the Ongoing Care Plan.
+How to deliver every part of the package and the ongoing Care Plan. For sales, scripts, emails, and process flow, see `OPERATIONS.md`. For pricing facts, see `CLAUDE.md`.
 
-> **The package is 3 pages:** Home, Services, Contact. Extra pages are $75 each.
-> All add-ons are **$75 each**. Features marked **(add-on)** below are not in the base $599 package.
-> The Ongoing Care Plan ($79/month, mandatory 12-month minimum) covers hosting, security updates, website edits, backup/maintenance, and support.
+> **Package = 3 pages:** Home, Services, Contact. Extra pages $75 each.
+> **Add-ons (each $75):** FAQ section · extra page · extra revision round.
+> **Care Plan ($79/mo, 12-mo minimum):** hosting, security updates, website edits, backup/maintenance, support.
 
----
-
-# PART A — PACKAGE DELIVERABLES
-
-These are included in every $599 Business Presence Package build.
+Start every build from the closest demo in `demos/`. Most of what's below is a brief reference, not a tutorial — the real source code for each pattern is already in the three demos.
 
 ---
 
-## 1. 3-PAGE WEBSITE
+# Part A — Package Deliverables
 
-**The standard 3 pages:**
+## 1. 3-Page Website
 
-| Page | Purpose | Key sections |
-|---|---|---|
-| Home | First impression, capture attention | Hero with headline + CTA, services overview, reviews/testimonials, photo gallery, business hours + service area, email signup, contact CTA |
-| Services | What they offer | Each service with name, short description, starting price (if comfortable), click-to-call button |
-| Contact | Get the call/form submission | Phone (click-to-call), email, address, hours, service area, embedded Google Maps, contact form |
+| Page | Sections |
+|---|---|
+| Home | Hero + CTA, services overview, reviews, photo gallery, hours + service area, email signup, contact CTA |
+| Services | Each service: name, short description, starting price (optional), click-to-call |
+| Contact | Phone (click-to-call), email, address, hours, service area, Google Maps embed, contact form |
 
-**Setup:**
-1. Use the demo sites in `demos/` as your starting template — swap content, adjust colors
-2. Each page is a separate `.html` file linked from the nav (`index.html`, `services.html`, `contact.html`)
-3. Keep the nav identical across all pages
-4. Footer should appear on every page with phone number + address + social links
+Each page is a separate `.html` file (`index.html`, `services.html`, `contact.html`). Keep the nav and footer identical across all three. Footer carries phone + address + social links + privacy/terms.
 
-**Time estimate:** 3–5 hours for a build once you've done 2–3 of them.
+**Time:** 3–5 hours per build after the first 2–3.
 
----
+## 2. Mobile-Friendly Design
 
-## 2. MOBILE-FRIENDLY DESIGN
+Required: `<meta name="viewport" content="width=device-width, initial-scale=1.0">` in every `<head>`. Use flexbox/grid for all layouts. One breakpoint at `max-width: 768px` minimum. Test in Chrome DevTools at 375px (iPhone) and 768px (iPad). Body text ≥14px. Tap targets ≥44px tall.
 
-**What it means:** The site reflows and looks clean on any screen width.
+## 3. Contact Form + Click-to-Call
 
-**How to ensure it:**
-- Use `<meta name="viewport" content="width=device-width, initial-scale=1.0">` in every `<head>` — always include this
-- Use CSS flexbox or grid for all layouts
-- Add breakpoints: at minimum, one for `max-width: 768px` (tablets/phones)
-- Test in Chrome DevTools: press F12 → click the phone icon → check at 375px (iPhone) and 768px (iPad)
-- Images: use `max-width: 100%; height: auto;` so they never overflow
+**Contact form (Formspree):**
+1. formspree.io → new form per client
+2. Copy endpoint URL: `https://formspree.io/f/xxxxx`
+3. `<form action="..." method="POST">` with name / email / phone / message fields
+4. Add `<input type="hidden" name="_next" value="https://[client-site]/thanks.html">` for the redirect
+5. Test by submitting
 
-**Common mistakes:**
-- Fixed pixel widths on containers (use `%` or `max-width` instead)
-- Text that's too small on mobile (minimum 14px body text)
-- Buttons that are too small to tap (minimum 44px tall touch target)
+Free tier: 50 submissions/month per form. Plenty for a local business.
 
----
+**Click-to-call:** wrap the phone number in a `tel:` link (`<a href="tel:+15125550123">`). Sticky button on Services page (mobile bottom-right). Inline next to each service. Footer everywhere. Phone calls convert ~10x better than forms for local services.
 
-## 3. CONTACT FORM + CLICK-TO-CALL
+## 4. Reviews / Testimonials
 
-### Contact form (Formspree)
+Get 3–6 from client (or permission to pull from their Google Business Profile). Each: 1–3 sentences, first name + last initial + city.
 
-**What it does:** Visitor fills out name/email/message → email lands in your client's inbox.
+Use the card-grid pattern from the demos. If client has zero reviews, ask them to text 5 recent customers — 3 will reply within a day. Soft-launch without if needed; add post-launch.
 
-**Setup steps:**
-1. Go to [formspree.io](https://formspree.io) and create a free account
-2. Click "New Form" → give it the client's business name
-3. Copy the form endpoint URL — looks like `https://formspree.io/f/xpzgkrdo`
-4. In the HTML, set `<form action="https://formspree.io/f/xpzgkrdo" method="POST">`
-5. Add a hidden input to redirect after submission:
-   ```html
-   <input type="hidden" name="_next" value="https://yourclientsite.com/thanks.html">
-   ```
-6. Test by submitting a test message — check it arrives in the client's inbox
+For schema markup (Section 11), only include `aggregateRating` if the numbers are real from their GBP.
 
-**Form fields to include:**
-```html
-<input type="text"  name="name"    placeholder="Your name"    required>
-<input type="email" name="email"   placeholder="Your email"   required>
-<input type="tel"   name="phone"   placeholder="Phone number">
-<textarea           name="message" placeholder="How can we help?"></textarea>
-<button type="submit">Send Message</button>
-```
+## 5. Photo Gallery
 
-**Free tier limits:** 50 submissions/month per form. Plenty for a local business.
-
-### Click-to-call button
-
-**What it does:** On mobile, tapping the phone number opens the dialer instantly.
-
-**Markup:** Wrap the phone number in a `tel:` link — strip spaces and punctuation in the `href`, but keep formatting in the visible text.
-
-```html
-<a class="call-cta" href="tel:+15125550123">📞 Call (512) 555-0123</a>
-```
-
-**Where to put it:**
-- Sticky button on the Services page (top-right or bottom-right on mobile)
-- Inline next to each service description
-- In the header on mobile (hamburger nav can collapse, but the call button stays visible)
-- In the footer on every page
-
-**Styling tip:** Make it visually distinct — a colored pill button. Phone calls convert ~10x better than form submissions for local services.
-
----
-
-## 4. REVIEWS / TESTIMONIALS SECTION
-
-**What it does:** Surfaces social proof on the homepage so visitors trust the business before they click "Contact".
-
-**How to gather them (ask the client during onboarding):**
-- 3–6 short reviews (1–3 sentences each)
-- Customer first name + last initial (e.g. "Sarah M.")
-- City or neighborhood (optional, but boosts local trust)
-- If they have Google reviews already, pull the best 3–6 from their Google Business Profile
-
-**If they have zero reviews yet:**
-- Ask them to text 5 recent customers: *"Hey, mind sending me a quick sentence about working with us? Trying to update my website."* — 3 will reply within a day
-- Worst case, soft-launch without testimonials and add them after week 1
-
-**HTML structure (card grid):**
-```html
-<section class="reviews">
-  <h2>What customers say</h2>
-  <div class="review-grid">
-    <article class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <blockquote>"Showed up on time, fixed the problem, fair price. Will use again."</blockquote>
-      <div class="review-by">— Sarah M., Austin TX</div>
-    </article>
-    <!-- repeat 3–6 times -->
-  </div>
-</section>
-```
-
-**Add it to the LocalBusiness schema markup** (section 11) so Google can show the stars in search results:
-
-```json
-"aggregateRating": {
-  "@type": "AggregateRating",
-  "ratingValue": "4.9",
-  "reviewCount": "47"
-}
-```
-
-Only include `aggregateRating` if the numbers are real and pulled from their Google Business Profile — don't invent.
-
----
-
-## 5. PHOTO GALLERY
-
-**What it means:** A responsive grid of the business's photos — work, location, products.
-
-**Setup:**
-- Get 10–20 photos from the client (or pull from their Google Maps listing with permission)
-- Resize images to max 1200px wide before embedding (keeps load time fast) — use free tools like [Squoosh](https://squoosh.app) or [TinyPNG](https://tinypng.com)
-- Build a CSS grid gallery:
-
-```html
-<div class="gallery-grid">
-  <img src="photo1.jpg" alt="Description">
-  <img src="photo2.jpg" alt="Description">
-  <!-- etc -->
-</div>
-```
+Get 10–20 photos from client (or pull from their Google Maps listing with permission). Resize to max 1200px wide (squoosh.app or tinypng.com). CSS grid:
 
 ```css
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 12px;
-}
-.gallery-grid img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  border-radius: 12px;
-}
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 ```
 
-**If client has no photos:** Pull from their Google Maps listing (right-click → Save image), use free Unsplash stock for the business type, or ask them to take 10 quick phone photos.
+Photo aspect 4/3, `object-fit: cover`, border-radius 12px. If client has no photos: pull from Google Maps, use Unsplash for the business type, or ask for 10 quick phone photos.
 
----
+## 6. Business Hours + Service Area
 
-## 6. BUSINESS HOURS + SERVICE AREA
+**Hours:** display top of Contact page (large), footer (compact), and inside LocalBusiness schema. Use `<dl class="hours">` with `<dt>day</dt><dd>time</dd>`. If client is 24/7 (plumbers, locksmiths), put "OPEN 24/7" in the hero on every page — massive trust signal.
 
-**What it does:** Tells visitors when the business is open and where it operates — both are major ranking factors for "near me" Google searches.
+**Service area:** inline paragraph on Home + Contact ("Proudly serving Austin, Round Rock, Cedar Park"), bullet list on Services page, and `areaServed` in schema. Google uses `areaServed` to decide which "near me" searches show your client.
 
-### Hours of operation
+## 7. Google Maps Embed (Contact page)
 
-**Where to display:**
-- Top of the Contact page (large, scannable)
-- Footer on every page (compact)
-- Inside the LocalBusiness schema markup (section 11)
+maps.google.com → search address → Share → Embed → copy the `<iframe>`. Wrap in a `div` with `border-radius` and `overflow: hidden` to match card style.
 
-**Markup:**
-```html
-<dl class="hours">
-  <dt>Mon–Fri</dt><dd>8:00 AM – 6:00 PM</dd>
-  <dt>Saturday</dt><dd>9:00 AM – 2:00 PM</dd>
-  <dt>Sunday</dt><dd>Closed</dd>
-</dl>
+If the business isn't on Maps yet, embed an address search instead:
+```
+<iframe src="https://maps.google.com/maps?q=123+Main+St+Austin+TX&output=embed" ...>
 ```
 
-**Pro tip:** If the business is "open 24/7" (plumbers, locksmiths, towing), put **OPEN 24/7** in the hero on every page — it's a massive trust + conversion signal.
+## 8. Email Signup Form
 
-### Service area
+Easiest: a second Formspree form per client (named "[Business] Email List"). Single-field email-only — never ask for name on a homepage signup, email-only converts 3x better.
 
-**What it is:** The cities, neighborhoods, or zip codes the business serves. Critical for contractors, plumbers, electricians, cleaners — anyone who travels to the customer.
+Better if client already uses Mailchimp/Brevo/ConvertKit: use their embed snippet so they get a real list with unsubscribe handling.
 
-**Where to display:**
-- Inline paragraph on Home and Contact pages: *"Proudly serving Austin, Round Rock, Cedar Park, and Pflugerville."*
-- A simple bullet list on the Services page
-- Inside the LocalBusiness schema markup as `areaServed`
+Placement: footer (always) + one inline on Home (after gallery or reviews).
 
-```json
-"areaServed": [
-  { "@type": "City", "name": "Austin" },
-  { "@type": "City", "name": "Round Rock" },
-  { "@type": "City", "name": "Cedar Park" }
-]
-```
+## 9. Google Business Profile Setup & Optimization
 
-**Why it matters:** Google uses `areaServed` to decide which cities your client shows up for in "near me" searches.
+The single highest-value local-SEO move. Walk through it WITH the client (their Google account, not yours).
 
----
+1. business.google.com → sign in → Add your business
+2. Claim existing or create from scratch
+3. Fill **completely:** legal name, specific category (e.g. "Italian Restaurant" not "Restaurant"), 2–3 secondary categories, address (or hide if service-area-only), service area matching Section 6, phone matching the site exactly (NAP consistency matters), website URL, hours (every day including "Closed"), 750-char description with city + main service, 10+ photos.
+4. Verification by postcard (5–7 days) or instant video call. Client does this step.
+5. After setup: tell client to ask their next 5 customers for reviews. Reviews are everything.
 
-## 7. GOOGLE MAPS EMBED (Contact page)
+## 10. Search-Ready Setup
 
-**What it does:** Shows an interactive map of the business location right on the Contact page.
+Foundation that lets Google find and categorize the site.
 
-**Setup steps:**
-1. Go to [maps.google.com](https://maps.google.com)
-2. Search for the business address
-3. Click Share → Embed a map → Copy HTML
-4. Paste the `<iframe>` directly into the HTML on the Contact page
+- **Title tags** — unique per page, 50–60 chars: `<title>Tucker Plumbing — Emergency Plumber in Austin, TX</title>`
+- **Meta description** — every page, 120–160 chars
+- **Heading hierarchy** — one `<h1>` per page (contains business type + city), `<h2>` for sections, never skip levels
+- **Image alt text** — descriptive, not "image1.jpg"
+- **Consistent NAP** — Name, Address, Phone identical across the site, GBP, and any directory listings. Google checks. Inconsistency hurts ranking.
+- **Clean URLs** — `services.html` not `page2.html`
+- **One keyword per page** in title, h1, meta description, first paragraph. Format: `[service] + [city]` (e.g. "emergency plumber Austin TX").
 
-**If the business isn't on Google Maps yet:**
-- They need a Google Business Profile first (see section 9)
-- In the meantime, embed the address as a map search:
-  ```html
-  <iframe
-    src="https://maps.google.com/maps?q=123+Main+St+Austin+TX&output=embed"
-    width="100%" height="350" style="border:0;" loading="lazy">
-  </iframe>
-  ```
+Don't promise rankings. Promise that Google can find and read the site.
 
-**Styling tip:** Wrap in a `div` with `border-radius` and `overflow: hidden` to match your card style.
+## 11. Local Schema Markup (JSON-LD)
 
----
-
-## 8. EMAIL SIGNUP FORM
-
-**What it does:** Captures email addresses for the client's own marketing list — promos, seasonal updates, new services. Low-friction visitor → lead.
-
-**Easiest option — Formspree (same account as the contact form):**
-1. In Formspree, create a SECOND form for this client (e.g. "Acme Plumbing Email List")
-2. Use the new endpoint:
-   ```html
-   <form action="https://formspree.io/f/YOUR_NEWSLETTER_ID" method="POST" class="signup-form">
-     <label class="visually-hidden" for="signup-email">Email address</label>
-     <input id="signup-email" type="email" name="email" placeholder="your@email.com" required>
-     <input type="hidden" name="_subject" value="New email signup — Acme Plumbing">
-     <button type="submit">Get updates</button>
-   </form>
-   ```
-3. Tell the client: every signup gets emailed to their inbox. They can copy/paste the email into Mailchimp/Brevo later.
-
-**Better option (if the client already has Mailchimp / Brevo / ConvertKit):** Use that provider's embed snippet instead — they get a real list with unsubscribe handling out of the box.
-
-**Where to put it:**
-- Footer (always)
-- One inline placement on the Home page (after the gallery or reviews works well)
-- Short, single-field — never ask for name on a homepage signup; email-only converts 3x better
-
-**Copy guidance:**
-- "Get specials + seasonal tips in your inbox." (services)
-- "Be the first to know about new menu items." (restaurants)
-- "Monthly tips for keeping your home running." (home services)
-
----
-
-## 9. GOOGLE BUSINESS PROFILE SETUP & OPTIMIZATION
-
-**What it means:** Their listing on Google Maps and Google Search ("the box" that appears when you search a business name). This is the single highest-value SEO thing you can do for a local business.
-
-**Setup steps:**
-1. Go to [business.google.com](https://business.google.com)
-2. Sign in with a Google account (ideally the client's, or create one for them)
-3. Click "Add your business" → search for the business name
-4. If it exists already: claim it (they'll verify by postcard, phone, or email)
-5. If it doesn't exist: create it from scratch
-
-**Fields to fill in completely:**
-- Business name (exact legal name — must match the website and any other directory listings)
-- Category (be specific — "Italian Restaurant" not just "Restaurant")
-- Secondary categories (add 2–3 if relevant)
-- Address (or hide it if service-area business with no storefront)
-- Service area (list all cities/zip codes — must match section 6 on the site)
-- Phone number (must match the site exactly — Google checks for NAP consistency)
-- Website URL (their new site)
-- Hours of operation (every day, including "Closed")
-- Business description (750 characters, include their city and main service)
-- Upload 10+ photos (exterior, interior, products/services, owner, team)
-- Add services with descriptions (this populates the "Services" tab on their listing)
-
-**Verification:** Google usually verifies by postcard (5–7 days) or instant video call. Give the client a heads-up — they need to be the one to do the final verify step.
-
-**After setup:**
-- Tell the client to ask their first 5 customers to leave a Google review. Reviews are everything.
-- Set a calendar reminder for them to post a Google Business Profile update once a month (new photos, specials, seasonal hours) — it keeps the listing ranked.
-
----
-
-## 10. SEARCH-READY SETUP
-
-**What it means:** The technical SEO foundation that lets Google find, read, and properly categorize the site. Bundled with every Business Presence Package build.
-
-**Checklist for every build:**
-
-**Title tags** — unique for every page, 50–60 characters:
-```html
-<title>Tucker Plumbing — Emergency Plumber in Austin, TX</title>
-```
-
-**Meta description** — every page, 120–160 characters:
-```html
-<meta name="description" content="Tucker Plumbing offers 24/7 emergency plumbing in Austin, TX. Licensed, insured, same-day service. Call (512) 555-0123.">
-```
-
-**Heading hierarchy:**
-- One `<h1>` per page — should contain the business type + city
-- Use `<h2>` for section headings, `<h3>` for sub-items
-- Never skip levels (don't go `<h1>` → `<h3>`)
-
-**Image alt text:**
-```html
-<img src="plumber-austin.jpg" alt="Tucker Plumbing technician fixing pipes in Austin TX">
-```
-
-**Consistent NAP** (Name, Address, Phone — must be readable text, not an image, and identical across the site, the Google Business Profile, and any directory listings):
-```html
-<p>Tucker Plumbing | 456 Repair Ave, Austin, TX 78701 | (512) 555-0123</p>
-```
-
-**Clean URLs:** Match the page name — `services.html`, `contact.html`, not `page2.html`.
-
-**Keyword targeting (light version — included, deeper work as add-on):**
-- Pick ONE primary keyword per page using format `[service] + [city]` (e.g. "emergency plumber Austin TX")
-- Use it in the page `<title>`, the `<h1>`, the meta description, and the first paragraph
-
-Do not promise keyword rankings — search-ready setup just means Google can find, read, and properly categorize the site. Combined with Google Business Profile (section 9) and schema markup (section 11), it's enough to start ranking for "[business type] near me" and "[business type] [city]" within a few weeks of launch.
-
----
-
-## 11. LOCAL SCHEMA MARKUP (JSON-LD)
-
-**What it means:** Hidden code that tells Google exactly what kind of business this is, their hours, phone, address, service area, and reviews — improves how they appear in search results.
-
-**Paste this in the `<head>` of every page, filled out for the client:**
+Paste in every page's `<head>`, filled out for the client:
 
 ```html
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Plumber",
-  "name": "Tucker Plumbing Services",
-  "description": "24/7 emergency plumbing in Austin, TX",
-  "url": "https://tuckerplumbing.com",
+  "name": "Tucker Plumbing",
   "telephone": "+15125550123",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "456 Repair Ave",
-    "addressLocality": "Austin",
-    "addressRegion": "TX",
-    "postalCode": "78701",
-    "addressCountry": "US"
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Austin" },
-    { "@type": "City", "name": "Round Rock" },
-    { "@type": "City", "name": "Cedar Park" },
-    { "@type": "City", "name": "Pflugerville" }
-  ],
+  "url": "https://tuckerplumbing.com",
+  "address": { "@type": "PostalAddress", "streetAddress": "...", "addressLocality": "Austin", "addressRegion": "TX", "postalCode": "78701" },
+  "areaServed": [{ "@type": "City", "name": "Austin" }],
   "openingHours": "Mo-Su 00:00-24:00",
-  "priceRange": "$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "47"
-  }
+  "priceRange": "$$"
 }
 </script>
 ```
 
-> **Important:** Only include the `aggregateRating` block if the numbers come from the client's real Google Business Profile. If they have no reviews yet, delete the whole block — fake numbers will get the listing flagged.
+`@type` for common businesses: `Plumber` / `Electrician` / `HVACBusiness` / `Restaurant` / `HairSalon` / generic `LocalBusiness`. Validate at validator.schema.org.
 
-**`@type` options for common businesses:**
-- Plumber, Electrician, HVACBusiness → `"@type": "Plumber"` etc.
-- Restaurant → `"@type": "Restaurant"`
-- Hair salon → `"@type": "HairSalon"`
-- General → `"@type": "LocalBusiness"`
+**Only include `aggregateRating`** if you have real numbers from the client's GBP. Faking them gets the listing flagged.
 
-Takes 5 minutes per site. Validate at [validator.schema.org](https://validator.schema.org) after.
+## 12. Social Media Links (Footer)
+
+Icons in the footer linking to client's Facebook / Instagram / Yelp / Google Business listing. Use SVG icons or heroicons.com. Always `target="_blank" rel="noopener"`. If client has no social, skip — don't ship dead links.
 
 ---
 
-## 12. SOCIAL MEDIA LINKS (footer)
+# Part B — Add-ons ($75 each)
 
-**What it means:** Icons (or text links) in the footer linking to the client's social profiles.
+## 13. FAQ Section
 
-**Setup:**
-1. Ask the client for their handles during onboarding
-2. Common platforms for local businesses: Facebook, Instagram, Yelp, Google Business Profile (their listing)
-3. Use SVG icons or a free icon library like [Heroicons](https://heroicons.com)
-4. Place in the footer: `<a href="https://facebook.com/businessname" target="_blank" rel="noopener">`
-5. Always use `target="_blank"` so it opens in a new tab, and always pair with `rel="noopener"` for security
+Accordion-style, 6–8 questions. Ask client for their most common, or use defaults by business type. Add FAQPage schema markup so Google can show the questions in search results.
 
-**If they don't have social media:** Skip the icons. Don't put dead links.
+## 14. Extra Page
+
+Standard structure inheriting nav, footer, and design system. Quote $75 per additional page on top of the base 3.
 
 ---
 
-# PART B — ADD-ONS
+# Part C — Care Plan Delivery
 
-Quote these separately. Not included in the base $599 package.
+$79/month, mandatory 12-month minimum.
 
----
+## 15. Hosting (Vercel)
 
-## 13. FAQ SECTION (add-on — $75)
+Push site to a GitHub repo per client → vercel.com → Import from GitHub → Deploy (no config for plain HTML) → add custom domain in Settings → SSL automatic. Vercel auto-deploys on every push. Cost to you: $0.
 
-**What it means:** Accordion-style Q&A section. Helps with SEO (Google sometimes pulls FAQ answers into search results) and reduces "dumb questions" in the client's inbox.
+## 16. Security Updates
 
-**Ask the client for their 6–8 most common questions.** If they don't know, use these defaults based on business type:
-- *Plumber:* Do you offer emergency service? Are you licensed? What areas do you serve? Do you give free estimates?
-- *Restaurant:* Do you take reservations? Is parking available? Do you have vegetarian options? Do you cater events?
-- *Salon:* Do I need an appointment? How far in advance should I book? Do you accept walk-ins?
+**Monthly security check (1st of every month):**
+1. Each client site in incognito → confirm green padlock
+2. Vercel dashboard → no failed deploys
+3. Formspree submissions for a spot-check on spam patterns
+4. GitHub Dependabot alerts (if any repos use packages)
 
-**HTML structure:**
-```html
-<div class="faq-item">
-  <button class="faq-q">Do you offer emergency service?</button>
-  <div class="faq-a">Yes — we're available 24/7 for emergencies. Call (512) 555-0123 any time.</div>
-</div>
-```
+If something breaks, same-day fix.
 
-**JS to make it toggle:**
-```javascript
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.nextElementSibling.classList.toggle('open');
-  });
-});
-```
+**Keep 2FA on Vercel, GitHub, and Stripe.** You're the gatekeeper for every client site.
 
-**Bonus:** Add FAQPage schema markup so Google can show the questions in search results — increases the listing's real estate on the results page.
+## 17. Website Edits
 
----
+Budget ~1 hr/month per client. Email is the channel.
 
-# PART C — ONGOING CARE PLAN
+**Normal edits:** hours, phone/address, photo swaps, service descriptions, prices, seasonal banners, typos, new testimonials.
 
-$79/month, mandatory 12-month minimum. Covers everything below.
+**Out of scope (quote separately):** new pages (+$75), redesigns, new features, anything taking 2+ hours.
 
----
+Batch updates weekly, not same-day (unless urgent). Log time in your Care Plan Clients sheet tab.
 
-## 14. HOSTING (Care Plan)
+If a client routinely exceeds 1 hr/month: email a usage summary, offer overage at $75/hr or 2-hr plan at $129/month.
 
-**What it means:** The site lives on Vercel's servers — fast global CDN, free SSL, zero cost to you.
+## 18. Backup / Maintenance
 
-**Setup steps (one-time per client site):**
-1. Push the site files to a GitHub repo (one repo per client)
-2. Go to [vercel.com](https://vercel.com) → New Project → Import from GitHub
-3. Select the repo → Deploy (no config needed for plain HTML)
-4. Vercel gives a free URL: `yoursite.vercel.app`
-5. Add the client's custom domain: Settings → Domains → Add → follow DNS instructions
-6. SSL is automatic — done
+**Backups (automatic):** each client site lives in its own GitHub repo. Every change is a commit. To roll back: `git revert <commit>` or one-click rollback in Vercel. GitHub IS the backup.
 
-**Ongoing:** Any time you update files and push to GitHub, Vercel auto-deploys in ~30 seconds.
+**Quarterly maintenance (every 3 months per client):**
+1. Lighthouse audit — keep all four scores ≥85
+2. Verify external links (Maps embed, social, anything embedded)
+3. Test contact form delivers (send yourself a submission)
+4. Domain expiry check — if within 6 months, schedule renewal reminder for client
 
-**Cost to you:** $0 (Vercel Hobby tier is free for unlimited static sites).
+**Domain renewals:** add every client's expiry date to your calendar. Email at 60 days and 30 days before. Losing a domain is catastrophic — the client will blame you regardless of whose name is on the registrar.
 
----
+## 19. Support
 
-## 15. SECURITY UPDATES (Care Plan)
+Email at the address you give clients at launch. Same-day weekday response before 4pm local. Next-day for evenings/weekends. Phone/text within 2 hours for actual site-down emergencies (rare).
 
-**What's covered:**
-- **SSL/TLS certificate** — Vercel rotates it automatically every 90 days; you verify monthly that it's valid (green padlock in the browser)
-- **Dependency patches** — if you ever use any JS library (Formspree script, analytics), check for advisories quarterly and bump versions
-- **Form spam control** — if Formspree starts forwarding obvious junk to the client, turn on Formspree's honeypot or reCAPTCHA (free)
-- **Domain registrar lock** — confirm the client's domain has "registrar lock" enabled at Namecheap/Cloudflare so it can't be stolen via transfer
-- **DNS / Vercel account 2FA** — keep 2FA on your Vercel and GitHub accounts; you're the gatekeeper for every client site
+**Boundaries up front:**
+- Email/text only, no scheduled calls unless the site is actually down
+- No blog/social/copy writing — that's marketing, not maintenance
+- No paid ads, no reviews management — separate engagements, not something Frontpage Studio offers
 
-**Monthly security check (do this on the 1st):**
-1. Visit each client site in an incognito window → confirm the padlock is green
-2. Open Vercel dashboard → check no deployments have failed
-3. Glance at Formspree submissions for any one client → spot-check for spam patterns
-4. Skim GitHub Dependabot alerts (if any repos use packages)
+## 20. Care Plan — 12-Month Minimum Term
 
-If something breaks, fix it that same day — clients don't see "security update" line items, they just see whether their site is up.
+**Track per client:** launch date, month-12 anniversary, monthly hours used, last edit date, domain renewal date.
 
----
-
-## 16. WEBSITE EDITS (Care Plan)
-
-Every Care Plan client gets ongoing edits. Budget **~1 hour per month per client** for planning purposes; the package isn't marketed with an explicit hourly cap, but watch for clients who consistently exceed an hour.
-
-**What counts as a normal edit:**
-- Changing hours of operation
-- Updating a phone number or address / service area
-- Swapping in a new photo
-- Adding or editing a service description
-- Updating a menu item or price
-- Adding a seasonal promotion banner
-- Fixing a typo
-- Adding new testimonials as they come in
-
-**What does NOT count (quote separately):**
-- Adding a new page (+$75)
-- Redesigning a section
-- New features (FAQ, e-commerce, etc.)
-- Anything taking more than ~2 hours of work
-
-**Process:**
-- Give every Care Plan client your email and tell them to send update requests there
-- Batch updates — do them once a week, not same-day (unless urgent)
-- Log time in a simple spreadsheet so you can summarize usage anytime — useful if a client questions edits or you need to back up an overage conversation
-
-**If a client routinely burns through 1 hr/month:** Email them a usage summary at any point and offer to either bill overage at $75/hr or upgrade to a 2 hr/month plan at $129/month going forward.
-
----
-
-## 17. BACKUP / MAINTENANCE (Care Plan)
-
-**Backups (automatic):**
-- Every site lives in its own GitHub repo
-- Every change is a Git commit — full history is preserved forever
-- To restore to any prior version: `git revert <commit>` or roll back the Vercel deployment in one click
-- No third-party backup service needed; GitHub IS the backup
-
-**Quarterly maintenance pass (do this every 3 months for every client):**
-1. Lighthouse audit in Chrome DevTools — keep Performance, Accessibility, Best Practices, SEO all ≥ 85
-2. Verify all external links still work (Google Maps embed, social links, any third-party links the client added)
-3. Confirm contact form still delivers (send a test submission yourself)
-4. Confirm the domain isn't expiring in the next 6 months (renew or remind the client to renew)
-
-**Domain renewal:**
-- Add every client's domain expiry date to your calendar
-- Email the client 60 days before, then again at 30 days
-- If they ignore both reminders, call them — losing a domain is catastrophic and they will blame you regardless of whose name is on the registrar
-
----
-
-## 18. SUPPORT (Care Plan)
-
-**What clients get:**
-- Email support at the address you give them at launch
-- Same-day response on weekdays for any request received before 4 PM local time
-- Next-day response for evening / weekend emails
-- Emergency phone/text response within 2 hours for sites that are fully down (rare)
-
-**Process:**
-- Triage every incoming request into one of: edit (do this week), question (reply today), bug/down (fix today), out-of-scope (quote separately)
-- Use a single email inbox or a free help-desk tool (e.g. Front, Plain free tier) once you pass ~15 clients
-- Keep a "common requests" snippet file — most edits repeat across clients (seasonal banners, holiday hours, photo swaps)
-
-**Boundaries to set up front:**
-- You don't take calls — email/text only — unless the site is actually down
-- You don't write blog posts, social posts, or copy for them (that's marketing, not maintenance)
-- You don't run paid ads or manage their reviews — that's a separate engagement and not something Frontpage Studio offers
-
----
-
-## 19. CARE PLAN — 12-MONTH MINIMUM TERM
-
-Every Care Plan signs the client up for a **mandatory 12-month minimum**. After that it goes month-to-month.
-
-**Track for every client:**
-- Launch date (= billing day each month)
-- Month-12 anniversary date (= renewal-decision touchpoint)
-- Total monthly hours used (so you can flag clients trending toward overage at any point)
-
-**Month 11 email (template) — continuous hosting confirmation:**
-> "Hi [Name] — quick heads-up: your initial 12-month Care Plan wraps up next month, and your hosting will continue uninterrupted at the same $79/month going forward. Nothing you need to do. After this point you can cancel any time with 30 days' notice. Thanks for being a great client this year!"
+**Month-11 email (continuous hosting confirmation):**
+> "Hi [Name] — quick heads-up: your initial 12-month Care Plan wraps up next month, and hosting continues uninterrupted at the same $79/month going forward. Nothing you need to do. After this point you can cancel any time with 30 days' notice. Thanks for being a great client this year."
 
 **If they ask to cancel during months 1–12:**
-> "I totally get it. The 12-month term is fixed — that's what lets me keep the build at $599. The remaining [X] months are still due. Once the year is up, you're free to cancel or move hosting elsewhere with a 30-day heads-up. Want me to send you a summary of what you've used so far?"
+> "I get it. The 12-month term is fixed — that's what lets me keep the build at $599. The remaining [X] months are still due. After year one you can cancel anytime with 30 days' notice."
 
-**At month 12, if they cancel:** hand over the GitHub repo + a zip of the latest files within 24 hours. Disable auto-billing. Wish them well. They often come back within 6 months.
+**At month 12 if they cancel:** hand over the GitHub repo + a zip of the latest files within 24 hours. Disable auto-billing. They often come back within 6 months.

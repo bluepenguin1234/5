@@ -1,51 +1,37 @@
 # Frontpage Studio — TODO
 
-Open work tracked across sessions. Move items to **Done** when complete (and date them). Add new items at the top of **Open** as they come up.
+## This week (do all four or stop)
+
+These four make the difference between "I have docs" and "I can take a customer."
+
+- [ ] **Stripe deposit Payment Link** ($299.50 one-time). Activate Stripe at stripe.com, create the Business Presence Package product, generate the deposit link. Save URL.
+- [ ] **Google Voice phone number.** Free at voice.google.com. Use it in the agency site footer and email signature. Don't give clients your personal cell.
+- [ ] **Vercel deploy of the agency site.** Push the repo to GitHub, connect to Vercel, bookmark the live URL. Auto-deploys on every commit going forward.
+- [ ] **Command-center Google Sheet.** Import the four CSVs in `templates/sheets/` per the `templates/sheets/README.md` walkthrough (~8 minutes). Open this every morning.
+
+When all four are checked, start calling. The cold-call script lives in `OPERATIONS.md` Part 2 §2.
 
 ---
 
-## Open — Brian to do
+## Phase 2 (revisit after 3 paying clients)
 
-These need Brian's accounts, payment, or hands-on action. Claude can't do them remotely. Full walkthroughs in `OPERATIONS.md` Appendix A.
+Everything below earns its place after revenue, not before. Don't touch any of it until clients 4 and 5 are signed.
 
-- [ ] **Register the domain** (`frontpagestudio.com` or `frontpage.studio`) at Namecheap or Cloudflare
-- [ ] **Set up Zoho Mail** for `brian@frontpagestudio.com`
-- [ ] **Push this repo to GitHub** under his account
-- [ ] **Connect repo to Vercel** for auto-deploy on every push; bookmark the Vercel URL as the live site
-- [ ] **Sign up for Formspree**, get the form endpoint, replace `YOUR_FORM_ID` in `index.html`
-- [ ] **Activate Stripe**, create the two products (Business Presence Package one-time + Care Plan recurring) and generate the three Payment Links (deposit / launch / subscription)
-- [ ] **Set up the Stripe Customer Portal** (Stripe dashboard → Settings → Customer Portal → enable + configure). Grab the portal URL and paste it into the launch email template so clients can self-serve subscription management (update card, view history). Removes most billing-support requests.
-- [ ] **Build the client-intake Google Form** from `templates/client-intake.md`
-- [ ] **Build the "command center" Google Sheet.** Import the four CSVs in `templates/sheets/` as four tabs. Full 5-minute walkthrough (with formula spec and dropdown values) lives in `templates/sheets/README.md`. Tabs: Leads, Active Builds, Care Plan Clients, Revenue.
-- [ ] **Set up the launch-day calendar reminder routine.** When a client launches, create three Google Calendar events tied to their launch date: (1) `+11 months` → send continuous-hosting email (template in `BUILD-GUIDE.md` §19), (2) `+12 months` → check usage + renewal-decision touchpoint, (3) quarterly recurring → maintenance pass (Lighthouse + link check + domain check, per `BUILD-GUIDE.md` §17). Zero infrastructure, zero forgotten emails.
-- [ ] **Get a Google Places API key** and install Python + scraper requirements so `scraper/find_leads.py` can run
-- [ ] **Decide which agency site to ship live**: `index.html` (peach/blue bento) or `index-v2.html` (cream/rust editorial)
+- Activate Stripe **subscription** product + launch Payment Link + Customer Portal
+- Build the **client-intake Google Form** from `templates/client-intake.md`
+- **Calendar reminder routine** at every launch (month 11 / month 12 / quarterly maintenance)
+- **Form an LLC** + business insurance (E&O)
+- **Terms of Service + Privacy Policy** on the agency site itself
+- **MSA** (`templates/msa.html`) introduced as standard practice
+- **Google Places API key** + Python scraper setup
+- **Expand demo template library** from 3 to 6–8
+- **Chat-driven personalized-demo + email workflow**
+- **Scraper deduplication + revisit logic** vs the Leads sheet
 
 ---
 
-## Open — Claude to do (waiting on Brian)
+## Always-pending (Claude executes when Brian unblocks)
 
-Tasks Claude will execute when Brian gives the trigger or unblocks them.
-
-- [ ] **Wire Stripe Payment Links into templates** once Brian has the three URLs:
-  - Replace `[STRIPE_DEPOSIT_LINK]` in `templates/proposal.html` and the deposit/proposal emails in `OPERATIONS.md` Part 3
-  - Replace `[STRIPE_LAUNCH_LINK]` in `templates/invoice.html` and the final-invoice email in `OPERATIONS.md` Part 3
-- [ ] **Wire the Stripe Customer Portal URL** into the launch email template (`OPERATIONS.md` Part 3 §9) once Brian enables the Portal
-- [ ] **Wire the Google Form intake link** into the deposit-confirmation email in `OPERATIONS.md` Part 3 §5 once Brian has the form URL
-- [ ] **Update `index.html` (or `index-v2.html`)** with Brian's real phone number, email, and any other contact info once he has them
-
----
-
-## Open — Claude to do (no blockers)
-
-Things Claude can do anytime; Brian just needs to say go.
-
-- [ ] **Build out the demo template library** — add nail salon, landscaper, HVAC, auto repair, florist, chiropractor, cleaning service (each with a distinct aesthetic per the design rules in `CLAUDE.md`). Goal: 6–8 polished templates so personalizing for a new lead is content-swap, not from-scratch.
-- [ ] **Build the chat-driven personalized-demo + email workflow.** Brian says *"build demo for [Business Name]"* in chat → Claude reads the matching row from the Leads sheet → picks the closest template from the demo library → swaps in real business info (name, address, hours, services, photos pulled from Google Places) → commits to `demos/leads/[business-slug]/` so Vercel auto-deploys → returns the live URL + a draft personalized follow-up email Brian reviews and sends. Also: *"draft follow-up for [Business]"*, *"mark [Business] as proposal sent"*, *"who's due for a callback today?"*.
-- [ ] **Implement lead-list deduplication and revisit logic in the scraper.** When `find_leads.py` runs, check against the Leads sheet before adding any row: skip businesses already present, flag callbacks whose Next Action Date is today or earlier, and keep a separate `do-not-call` list for `Status = dead` entries so they never re-enter the funnel.
-
----
-
-## Done
-
-- [x] **2026-05-29** — Added Tier-3 client lifecycle templates (`templates/msa.html`, `templates/welcome-packet.html`, `templates/launch-handover.md`, `templates/refund-policy.md`, `templates/client-privacy-policy.html`, `templates/client-terms-of-service.html`). OPERATIONS.md §5 (Deposit & Agreement) and §8 (Launch) updated to reference them. CLAUDE.md file map expanded.
+- Replace `[STRIPE_DEPOSIT_LINK]` in `templates/proposal.html` + `templates/invoice.html` + OPERATIONS.md once Brian has the URL
+- Replace `YOUR_FORM_ID` in `index.html` once Formspree is active
+- Replace `[Your Phone]` placeholders in `templates/proposal.html` once Brian has Google Voice

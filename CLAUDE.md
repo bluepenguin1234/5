@@ -65,7 +65,6 @@ web/
 ├── BUILD-GUIDE.md           ← Technical reference. How to actually build each feature (forms, schema, GBP, hosting, care-plan ops).
 │
 ├── index.html               ← Agency website (Frontpage Studio's own site)
-├── index-v2.html            ← Alternate design of the agency site (taste-skill aesthetic)
 ├── vercel.json              ← Vercel deployment config
 ├── .gitignore
 │
@@ -81,10 +80,9 @@ web/
 ├── templates/
 │   ├── proposal.html        ← Client proposal (print to PDF, attach to email)
 │   ├── invoice.html         ← Client invoice (print to PDF)
-│   ├── msa.html             ← Master Service Agreement (print to PDF, send pre-deposit)
-│   ├── welcome-packet.html  ← Welcome PDF (print + attach to deposit confirmation email)
+│   ├── msa.html             ← Master Service Agreement (Phase 2, introduce after first ~10 clients)
 │   ├── launch-handover.md   ← Launch handover doc (send at go-live with account info)
-│   ├── refund-policy.md     ← Refund and cancellation policy (referenced by MSA, also for agency site)
+│   ├── refund-policy.md     ← Refund and cancellation policy (referenced by MSA)
 │   ├── client-intake.md     ← Master intake questionnaire (paste into Google Form)
 │   ├── client-privacy-policy.html ← Drop-in /privacy.html template for client sites
 │   ├── client-terms-of-service.html ← Drop-in /terms.html template for client sites
@@ -164,7 +162,7 @@ When **any** of the following change, run a full audit across the entire repo be
    - `OPERATIONS.md`
    - `BUILD-GUIDE.md`
    - `TODO.md`
-   - `index.html`, `index-v2.html`
+   - `index.html`
    - `templates/proposal.html`, `templates/invoice.html`, `templates/client-intake.md`
    - `demos/*/index.html` (any demo that hardcoded a price or policy)
    - **Any new files added since this rule was last updated** — re-grep the whole repo, do not rely on this list being exhaustive
@@ -181,15 +179,6 @@ Marketing copy drifts. Numbers drift. Feature lists drift. The cure is not memor
 
 ---
 
-## What Brian still needs to do (one-time setup)
+## One-time setup (Brian)
 
-These require Brian to act — Claude cannot do them. Full instructions in `OPERATIONS.md` Appendix A.
-
-1. Buy domain (frontpagestudio.com or frontpage.studio)
-2. Set up Zoho Mail for brian@frontpagestudio.com (free)
-3. Create GitHub account + push this repo
-4. Connect repo to Vercel and add custom domain
-5. Sign up for Formspree and replace `YOUR_FORM_ID` in index.html
-6. Activate Stripe + create the three Payment Links (deposit, launch, $79/mo subscription)
-7. Build the Google Form intake from `templates/client-intake.md`
-8. Get a Google Places API key for the scraper
+Full walkthrough in `OPERATIONS.md` Appendix. Current task list lives in `TODO.md`.
